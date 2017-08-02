@@ -11,5 +11,6 @@
 #import "Organization.h"
 @interface MainViewController : UITableViewController
 @property (strong,readwrite) Organization* org;
-
+- (IBAction)saveEmployee:(UIStoryboardSegue *)unwindSegue;
+- (IBAction)cancelAdd:(UIStoryboardSegue *)unwindSegue;
 @end

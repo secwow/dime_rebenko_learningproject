@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "DetailViewController.h"
+#import "CreateEmployeeViewController.h"
 
 @interface MainViewController ()
 
@@ -20,7 +21,7 @@
     [super viewDidLoad];
     
     Organization *org = [[Organization alloc] initWithName:@"Inter"];
-    for(int i = 0; i < 100; i++)
+    for(int i = 0; i < 4; i++)
     {
         NSString *name = [@(i).stringValue stringByAppendingString: @"vasya "];
         NSString *fullName = [name stringByAppendingString:@"pupkin"];
@@ -72,6 +73,27 @@
         controller.detailItem = object;
         
     }
+}
+
+- (IBAction)saveEmployee:(UIStoryboardSegue *)unwindSegue
+{
+    CreateEmployeeViewController*  controller = [unwindSegue sourceViewController];
+    Employee* employee = controller.savedEmployee;
+    [self addEmployee:employee];
+    
+}
+
+- (void)addEmployee:(Employee*)employee
+{
+    [_org addEmployee:employee];
+    NSIndexPath *path =[NSIndexPath indexPathForRow:_org.getCountEmplyees-1 inSection:0];
+    NSArray *indexArray = [NSArray arrayWithObject:path];
+    [self.tableView insertRowsAtIndexPaths:indexArray withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
+- (IBAction)cancelAdd:(UIStoryboardSegue *)unwindSegue
+{
+    
 }
 
 
