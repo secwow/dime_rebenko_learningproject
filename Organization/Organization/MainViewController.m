@@ -1,16 +1,10 @@
-//
-//  MainViewController.m
-//  Organization
-//
-//  Created by New user on 01.08.17.
-//  Copyright © 2017 New user. All rights reserved.
-//
-
 #import "MainViewController.h"
 #import "DetailViewController.h"
 #import "CreateEmployeeViewController.h"
+#import "Employee.h"
+#import "Organization.h"
 
-@interface MainViewController ()
+@interface MainViewController ()		
 
 @end
 
@@ -73,17 +67,22 @@
         controller.detailItem = object;
         
     }
-}
-
-- (IBAction)saveEmployee:(UIStoryboardSegue *)unwindSegue
-{
-    CreateEmployeeViewController*  controller = [unwindSegue sourceViewController];
-    Employee* employee = controller.savedEmployee;
-    [self addEmployee:employee];
+    
+    if ([[segue identifier] isEqualToString:@"AddUser"])
+    {
+        CreateEmployeeViewController *controller = [segue destinationViewController];
+        
+        controller.saver = self;
+    }
     
 }
 
-- (void)addEmployee:(Employee*)employee
+- (void)saveEmployee:(Employee *) employee
+{
+    [self addEmployee:employee];
+}
+
+- (void)addEmployee:(Employee *)employee
 {
     [_org addEmployee:employee];
     NSIndexPath *path =[NSIndexPath indexPathForRow:_org.getCountEmplyees-1 inSection:0];
@@ -91,10 +90,6 @@
     [self.tableView insertRowsAtIndexPaths:indexArray withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
-- (IBAction)cancelAdd:(UIStoryboardSegue *)unwindSegue
-{
-    
-}
 
 
 

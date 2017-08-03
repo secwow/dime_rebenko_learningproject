@@ -68,14 +68,10 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Add employee" id="DQQ-9L-Dqf">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="GjA-R8-pFV">
-                                            <connections>
-                                                <segue destination="ay7-f6-Adk" kind="unwind" identifier="CancelAdd" unwindAction="cancelAdd:" id="hBj-da-WdP"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="GjA-R8-pFV"/>
                                         <barButtonItem key="rightBarButtonItem" title="Save" id="jbv-6a-VUd">
                                             <connections>
-                                                <segue destination="ay7-f6-Adk" kind="unwind" identifier="SaveEmployee" unwindAction="saveEmployee:" id="Wl4-1m-cIQ"/>
+                                                <action selector="saveEmployee:" destination="jj6-q4-7hG" id="sRc-Az-NQW"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -89,13 +85,12 @@
                     </toolbarItems>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="firstName" destination="8R8-ao-6pQ" id="Qex-SL-GiQ"/>
-                        <outlet property="lastName" destination="HFI-Ry-RKH" id="2PR-bU-DQR"/>
-                        <outlet property="salary" destination="hFg-bG-a3L" id="qeC-EH-6mL"/>
+                        <outlet property="firstNameTextField" destination="8R8-ao-6pQ" id="5q1-MT-afO"/>
+                        <outlet property="lastNameTextField" destination="HFI-Ry-RKH" id="5xX-No-SpV"/>
+                        <outlet property="salaryTextField" destination="hFg-bG-a3L" id="qpv-ya-4ug"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nKH-ob-R4m" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="ay7-f6-Adk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="806" y="-419"/>
         </scene>
@@ -112,11 +107,11 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FnA-8M-A2L" id="T3x-zK-6A0">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FSU-0D-8ak">
-                                            <rect key="frame" x="15" y="0.0" width="325" height="43.5"/>
+                                            <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -138,7 +133,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="B4p-74-hHu">
                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
-                                <segue destination="jj6-q4-7hG" kind="presentation" id="tVz-Vn-vP2"/>
+                                <segue destination="jj6-q4-7hG" kind="presentation" identifier="AddUser" id="tVz-Vn-vP2"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
