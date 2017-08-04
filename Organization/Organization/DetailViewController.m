@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "Employee.h"
 
 @interface DetailViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *detailView;
@@ -41,16 +42,5 @@
         _detailItem = detailItem;
     
 }
-
-- (void)configureView
-{
-    // Update the user interface for the detail item.
-    
-   
-}
-
-
-
-
 
 @end

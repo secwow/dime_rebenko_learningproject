@@ -1,15 +1,10 @@
-//
-//  MainViewController.m
-//  Organization
-//
-//  Created by New user on 01.08.17.
-//  Copyright © 2017 New user. All rights reserved.
-//
-
 #import "MainViewController.h"
 #import "DetailViewController.h"
+#import "CreateEmployeeViewController.h"
+#import "Employee.h"
+#import "Organization.h"
 
-@interface MainViewController ()
+@interface MainViewController ()		
 
 @end
 
@@ -20,7 +15,7 @@
     [super viewDidLoad];
     
     Organization *org = [[Organization alloc] initWithName:@"Inter"];
-    for(int i = 0; i < 100; i++)
+    for(int i = 0; i < 4; i++)
     {
         NSString *name = [@(i).stringValue stringByAppendingString: @"vasya "];
         NSString *fullName = [name stringByAppendingString:@"pupkin"];
@@ -72,7 +67,29 @@
         controller.detailItem = object;
         
     }
+    
+    if ([[segue identifier] isEqualToString:@"AddUser"])
+    {
+        CreateEmployeeViewController *controller = [segue destinationViewController];
+        
+        controller.saver = self;
+    }
+    
 }
+
+- (void)saveEmployee:(Employee *) employee
+{
+    [self addEmployee:employee];
+}
+
+- (void)addEmployee:(Employee *)employee
+{
+    [_org addEmployee:employee];
+    NSIndexPath *path =[NSIndexPath indexPathForRow:_org.getCountEmplyees-1 inSection:0];
+    NSArray *indexArray = [NSArray arrayWithObject:path];
+    [self.tableView insertRowsAtIndexPaths:indexArray withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
 
 
 
