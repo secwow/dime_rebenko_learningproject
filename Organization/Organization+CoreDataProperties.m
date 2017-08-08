@@ -10,7 +10,8 @@
 #import "Employee+CoreDataClass.h"
 @implementation Organization (CoreDataProperties)
 
-+ (NSFetchRequest<Organization *> *)fetchRequest {
++ (NSFetchRequest<Organization *> *)fetchRequest
+{
 	return [[NSFetchRequest alloc] initWithEntityName:@"Organization"];
 }
 

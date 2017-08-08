@@ -4,6 +4,7 @@
 #import "Employee+CoreDataClass.h"
 #import "Organization+CoreDataClass.h"
 #import "AppDelegate.h"
+#import "HSDatePickerViewController.h"
 
 @interface MainViewController ()
 
@@ -30,6 +31,8 @@ NSString* attributeName = @"name"; //geniuos constant
     org = [context executeFetchRequest:request error:nil] == nil ?
                 [context executeFetchRequest:request error:nil] [0] :
                 [self primaryInit:context];
+    
+    
 }
 
 - (Organization *) primaryInit: (NSManagedObjectContext *) context
@@ -41,7 +44,6 @@ NSString* attributeName = @"name"; //geniuos constant
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Organization" inManagedObjectContext:context];
     [request setEntity:entity];
     return [context executeFetchRequest:request error:nil][0];
-
 }
 
 - (void)didReceiveMemoryWarning
@@ -62,7 +64,7 @@ NSString* attributeName = @"name"; //geniuos constant
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"CellForTitle"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellForTitle"];
     Employee *object = [org getEmployeeByIndex:indexPath.row];
     cell.textLabel.text = object.fullName;
     return cell;
@@ -98,13 +100,13 @@ NSString* attributeName = @"name"; //geniuos constant
     }
 }
 
-- (void)saveEmployee:(NSString *) firstName lastName:(NSString *)lastName salary:(NSInteger)salary
+- (void)saveEmployee:(NSString *) firstName lastName:(NSString *)lastName salary:(NSInteger)salary birthDate:(NSDate *)date
 {
-    
     Employee *employee = [NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:[AppDelegate context]];
     employee.lastName = lastName;
     employee.firstName = firstName;
     employee.salary = salary;
+    employee.birthDate = date;
     [org addEmplsObject:employee];
     NSIndexPath *path =[NSIndexPath indexPathForRow: org.getCountEmployees-1 inSection:0];
     NSArray *indexArray = [NSArray arrayWithObject:path];

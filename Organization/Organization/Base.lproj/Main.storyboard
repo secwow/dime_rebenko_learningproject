@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2gj-7X-f1p">
-                                <rect key="frame" x="16" y="20" width="268" height="44"/>
+                                <rect key="frame" x="16" y="64" width="268" height="44"/>
                                 <items>
                                     <navigationItem title="Add employee" id="DQQ-9L-Dqf">
                                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="GjA-R8-pFV">
@@ -40,9 +40,9 @@
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KjB-Rz-oiH">
-                                <rect key="frame" x="16" y="64" width="288" height="447"/>
+                                <rect key="frame" x="16" y="108" width="288" height="403"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HFI-Ry-RKH">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="HFI-Ry-RKH">
                                         <rect key="frame" x="20" y="137" width="248" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -66,24 +66,45 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8R8-ao-6pQ">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8R8-ao-6pQ">
                                         <rect key="frame" x="20" y="56" width="248" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hFg-bG-a3L">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hFg-bG-a3L">
                                         <rect key="frame" x="20" y="218" width="248" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthdate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cex-0s-PgE">
+                                        <rect key="frame" x="20" y="263" width="71" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QFD-0J-eJh">
+                                        <rect key="frame" x="20" y="299" width="248" height="30"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="NO"/>
+                                        </accessibility>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="pickDate:" destination="jj6-q4-7hG" eventType="touchDown" id="5nt-Fn-7h4"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="8R8-ao-6pQ" secondAttribute="trailing" constant="20" symbolic="YES" id="0Hr-Om-GOa"/>
                                     <constraint firstItem="VIf-wB-REZ" firstAttribute="top" secondItem="8R8-ao-6pQ" secondAttribute="bottom" constant="15" id="3z0-Rd-Gt0"/>
+                                    <constraint firstAttribute="trailing" secondItem="QFD-0J-eJh" secondAttribute="trailing" constant="20" id="5bk-Xh-hQj"/>
+                                    <constraint firstItem="QFD-0J-eJh" firstAttribute="top" secondItem="cex-0s-PgE" secondAttribute="bottom" constant="15" id="8Dp-Lw-VHz"/>
                                     <constraint firstItem="8R8-ao-6pQ" firstAttribute="top" secondItem="wXG-dE-hcD" secondAttribute="bottom" constant="15" id="EPr-Bl-Ciy"/>
+                                    <constraint firstItem="QFD-0J-eJh" firstAttribute="leading" secondItem="KjB-Rz-oiH" secondAttribute="leading" constant="20" id="H88-Dp-vxe"/>
                                     <constraint firstItem="wXG-dE-hcD" firstAttribute="leading" secondItem="KjB-Rz-oiH" secondAttribute="leading" constant="20" id="IaY-ZB-I8l"/>
                                     <constraint firstItem="VIf-wB-REZ" firstAttribute="leading" secondItem="KjB-Rz-oiH" secondAttribute="leading" constant="20" id="Iv9-rX-Aq4"/>
                                     <constraint firstItem="hFg-bG-a3L" firstAttribute="leading" secondItem="KjB-Rz-oiH" secondAttribute="leading" constant="20" id="P1C-M5-Ppj"/>
@@ -92,8 +113,10 @@
                                     <constraint firstItem="8QP-Bd-0DA" firstAttribute="leading" secondItem="KjB-Rz-oiH" secondAttribute="leading" constant="20" id="aHS-7b-VRJ"/>
                                     <constraint firstItem="8QP-Bd-0DA" firstAttribute="top" secondItem="HFI-Ry-RKH" secondAttribute="bottom" constant="15" id="b3S-iH-wg2"/>
                                     <constraint firstItem="HFI-Ry-RKH" firstAttribute="top" secondItem="VIf-wB-REZ" secondAttribute="bottom" constant="15" id="cFA-8O-MBI"/>
+                                    <constraint firstItem="cex-0s-PgE" firstAttribute="top" secondItem="hFg-bG-a3L" secondAttribute="bottom" constant="15" id="dAI-9v-9OW"/>
                                     <constraint firstItem="wXG-dE-hcD" firstAttribute="top" secondItem="KjB-Rz-oiH" secondAttribute="top" constant="20" id="h5I-zD-zMJ"/>
                                     <constraint firstItem="HFI-Ry-RKH" firstAttribute="leading" secondItem="KjB-Rz-oiH" secondAttribute="leading" constant="20" id="iHS-F2-eL7"/>
+                                    <constraint firstItem="cex-0s-PgE" firstAttribute="leading" secondItem="KjB-Rz-oiH" secondAttribute="leading" constant="20" id="kCP-Sm-9lW"/>
                                     <constraint firstItem="8QP-Bd-0DA" firstAttribute="top" secondItem="HFI-Ry-RKH" secondAttribute="bottom" constant="15" id="pO0-NY-fsQ"/>
                                     <constraint firstItem="hFg-bG-a3L" firstAttribute="top" secondItem="8QP-Bd-0DA" secondAttribute="bottom" constant="15" id="rXQ-vH-aod"/>
                                     <constraint firstAttribute="trailing" secondItem="HFI-Ry-RKH" secondAttribute="trailing" constant="20" symbolic="YES" id="tYf-74-bf8"/>
@@ -118,6 +141,7 @@
                     </toolbarItems>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="birthDateField" destination="QFD-0J-eJh" id="fRg-Qc-2jw"/>
                         <outlet property="firstNameTextField" destination="8R8-ao-6pQ" id="5q1-MT-afO"/>
                         <outlet property="lastNameTextField" destination="HFI-Ry-RKH" id="5xX-No-SpV"/>
                         <outlet property="salaryTextField" destination="hFg-bG-a3L" id="qpv-ya-4ug"/>
@@ -166,7 +190,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="B4p-74-hHu">
                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
-                                <segue destination="jj6-q4-7hG" kind="presentation" identifier="AddUser" id="tVz-Vn-vP2"/>
+                                <segue destination="jj6-q4-7hG" kind="showDetail" identifier="AddUser" action="showViewController:sender:" id="tVz-Vn-vP2"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

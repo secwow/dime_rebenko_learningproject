@@ -10,20 +10,25 @@
 
 @implementation Employee (CoreDataProperties)
 
-+ (NSFetchRequest<Employee *> *)fetchRequest {
++ (NSFetchRequest<Employee *> *)fetchRequest
+{
 	return [[NSFetchRequest alloc] initWithEntityName:@"Employee"];
 }
 
--(void)setFullName:(NSString*) string {
+-(void)setFullName:(NSString*) string
+{
     
 }
+
 - (NSString *)fullName{
+    
     return [self.firstName stringByAppendingString:self.lastName];
 }
 
 @dynamic firstName;
 @dynamic lastName;
 @dynamic salary;
+@dynamic birthDate;
 @dynamic org;
 
 @end

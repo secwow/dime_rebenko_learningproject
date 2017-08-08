@@ -12,11 +12,11 @@
 @synthesize persistentStoreCoordinator;
 static NSManagedObjectContext* context;
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    managedObjectModel = [self getObjectModel];
-    NSLog(@"%@ fgdfg", [self managedObjectModel]);
-    managedObjectContext = [self managedObjectContext];
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
     
+    managedObjectModel = [self getObjectModel];
+    managedObjectContext = [self managedObjectContext];
     persistentStoreCoordinator = [self persistentStoreCoordinator];
     context = managedObjectContext;
     return YES;
@@ -35,12 +35,12 @@ static NSManagedObjectContext* context;
     }		
     
     NSURL *nsurl = [[NSBundle mainBundle] URLForResource:@"Model" withExtension:@"momd"];
-    NSLog(@"%@", nsurl.absoluteString);
     managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:nsurl];
     return managedObjectModel;
 }
 
-- (NSManagedObjectContext *)managedObjectContext {
+- (NSManagedObjectContext *)managedObjectContext
+{
     
     if(managedObjectContext != nil){
         return managedObjectContext;
@@ -57,16 +57,20 @@ static NSManagedObjectContext* context;
 }
 
 
-- (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
-    if(persistentStoreCoordinator != nil){
+- (NSPersistentStoreCoordinator *)persistentStoreCoordinator
+{
+    
+    if(persistentStoreCoordinator != nil)
+    {
         return persistentStoreCoordinator;
     }
     
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Employer.sqlite"];
-    NSLog(@"%@", [storeURL absoluteString]);
     NSError *error = nil;
     persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel: managedObjectModel];
-    if(![persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]){
+    
+    if(![persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error])
+    {
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
@@ -74,10 +78,10 @@ static NSManagedObjectContext* context;
     return persistentStoreCoordinator;
 }
 
-- (NSURL *)applicationDocumentsDirectory{
+- (NSURL *)applicationDocumentsDirectory
+{
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
-
 
 + (void)saveContext
 {
@@ -95,8 +99,8 @@ static NSManagedObjectContext* context;
     
 }
 
-
-- (void)applicationWillTerminate:(UIApplication *)application {
+- (void)applicationWillTerminate:(UIApplication *)application
+{
     
     [AppDelegate saveContext];
 }

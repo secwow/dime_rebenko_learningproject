@@ -5,5 +5,5 @@
 
 
 @interface DetailViewController : UIViewController
-    @property (strong, nonatomic) Employee* detailItem;
+    @property (strong, nonatomic) Employee *detailItem;
 @end

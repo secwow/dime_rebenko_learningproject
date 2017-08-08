@@ -14,7 +14,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    if (detailItem) {
+    if (detailItem)
+    {
         NSInteger salary = detailItem.salary;
         NSString* information = [detailItem.fullName stringByAppendingString:@"’s salary is "];
         information = [information stringByAppendingString:[@(salary) stringValue]];
