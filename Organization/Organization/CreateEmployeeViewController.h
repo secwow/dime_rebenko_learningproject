@@ -1,8 +1,11 @@
 #import <UIKit/UIKit.h>
 #import "SavedProtocol.h"
 
+
+
+
 @interface CreateEmployeeViewController : UIViewController
 
-@property (nonatomic, retain) id <SaveEmployeeProtocol> delegate;
+@property (nonatomic, readwrite) id <SaveEmployeeProtocol> saver;
 
 @end

@@ -1,36 +1,46 @@
+//
+//  DetailViewController.m
+//  Organization
+//
+//  Created by New user on 02.08.17.
+//  Copyright © 2017 New user. All rights reserved.
+//
+
 #import "DetailViewController.h"
-#import "Employee+CoreDataClass.h"
+#import "Employee.h"
 
 @interface DetailViewController ()
-
 @property (weak, nonatomic) IBOutlet UILabel *detailView;
 
 @end
 
 @implementation DetailViewController
 
-@synthesize detailItem;
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    if (detailItem) {
-        NSInteger salary = detailItem.salary;
-        NSString* information = [detailItem.fullName stringByAppendingString:@"’s salary is "];
+    if (_detailItem) {
+        NSInteger salary = _detailItem.salary;
+        NSString* information = [_detailItem.fullName stringByAppendingString:@"’s salary is "];
         information = [information stringByAppendingString:[@(salary) stringValue]];
-        [self.detailView setText: information];
+        [_detailView setText: information];
     }
     
 }
 
+
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+    
 }
 
-- (void)setDetailItem:(Employee *)inputDetailItem
-{
-        detailItem = inputDetailItem;
+
+- (void)setDetailItem:(Employee *)detailItem{
+    
+        _detailItem = detailItem;
+    
 }
 
 @end
