@@ -17,7 +17,7 @@
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 NSString* attributeValue = @"Siemens";
-NSString* attributeName = @"name"; //geniuos constant
+NSString* attributeName = @"name"; //genious constant
 
 
 - (void)viewDidLoad
@@ -32,7 +32,7 @@ NSString* attributeName = @"name"; //geniuos constant
                 [self primaryInit:context];
 }
 
-- (Organization *) primaryInit: (NSManagedObjectContext *) context
+- (Organization *)primaryInit:(NSManagedObjectContext *)context
 {
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     Organization *organization = [NSEntityDescription insertNewObjectForEntityForName:@"Organization" inManagedObjectContext:context];

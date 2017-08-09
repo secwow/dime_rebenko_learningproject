@@ -1,11 +1,3 @@
-//
-//  Organization+CoreDataProperties.m
-//  Organization
-//
-//  Created by New user on 08.08.17.
-//  Copyright © 2017 New user. All rights reserved.
-//
-
 #import "Organization+CoreDataProperties.h"
 #import "Employee+CoreDataClass.h"
 @implementation Organization (CoreDataProperties)
@@ -51,8 +43,6 @@
     [self setValue:self.empls forKey:@"empls"];
     [self didChangeValueForKey:@"empls"];
 }
-
-
 
 @dynamic name;
 @dynamic empls;

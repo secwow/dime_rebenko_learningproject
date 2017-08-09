@@ -1,6 +1,5 @@
 #import "CreateEmployeeViewController.h"
 
-
 @interface CreateEmployeeViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *firstNameTextField;

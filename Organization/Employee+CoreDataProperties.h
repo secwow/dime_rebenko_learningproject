@@ -1,11 +1,3 @@
-//
-//  Employee+CoreDataProperties.h
-//  Organization
-//
-//  Created by New user on 08.08.17.
-//  Copyright © 2017 New user. All rights reserved.
-//
-
 #import "Employee+CoreDataClass.h"
 
 
