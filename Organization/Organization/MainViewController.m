@@ -73,6 +73,7 @@
         CreateEmployeeViewController *controller = [segue destinationViewController];
         
         controller.delegate = self;
+
     }
     
 }
