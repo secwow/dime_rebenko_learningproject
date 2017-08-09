@@ -23,6 +23,7 @@ NSString* attributeName = @"name"; //genious constant
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+  
     NSManagedObjectContext *context = [AppDelegate context];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Organization" inManagedObjectContext:context];
@@ -41,7 +42,6 @@ NSString* attributeName = @"name"; //genious constant
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Organization" inManagedObjectContext:context];
     [request setEntity:entity];
     return [context executeFetchRequest:request error:nil][0];
-
 }
 
 - (void)didReceiveMemoryWarning
@@ -111,6 +111,5 @@ NSString* attributeName = @"name"; //genious constant
     [self.tableView insertRowsAtIndexPaths:indexArray withRowAnimation:UITableViewRowAnimationAutomatic];
     [AppDelegate saveContext];
 }
-
 
 @end
