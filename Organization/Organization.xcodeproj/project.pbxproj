@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B2078C7A1F320BE10072F0D6 /* Organization.m in Sources */ = {isa = PBXBuildFile; fileRef = B2078C791F320BE10072F0D6 /* Organization.m */; };
-		B2078C801F320D220072F0D6 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = B2078C7F1F320D220072F0D6 /* Employee.m */; };
+		B295397F1F3A054400CDD73C /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = B295397C1F3A054400CDD73C /* Employee.m */; };
+		B29539801F3A054400CDD73C /* Organization.m in Sources */ = {isa = PBXBuildFile; fileRef = B295397E1F3A054400CDD73C /* Organization.m */; };
+		B29539821F3A063700CDD73C /* CreateEmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B29539811F3A063700CDD73C /* CreateEmployeeViewController.m */; };
 		B2A5FB3E1F31D11600F8E800 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A5FB3D1F31D11600F8E800 /* DetailViewController.m */; };
 		B2FD0F891F30E0050065BC4D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FD0F881F30E0050065BC4D /* main.m */; };
 		B2FD0F8C1F30E0050065BC4D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FD0F8B1F30E0050065BC4D /* AppDelegate.m */; };
@@ -19,10 +20,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B2078C781F320BE10072F0D6 /* Organization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Organization.h; sourceTree = "<group>"; };
-		B2078C791F320BE10072F0D6 /* Organization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Organization.m; sourceTree = "<group>"; };
-		B2078C7E1F320D220072F0D6 /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Employee.h; sourceTree = "<group>"; };
-		B2078C7F1F320D220072F0D6 /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
+		B295397B1F3A054400CDD73C /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Employee.h; path = ../../../repo/Organization/Organization/Employee.h; sourceTree = "<group>"; };
+		B295397C1F3A054400CDD73C /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Employee.m; path = ../../../repo/Organization/Organization/Employee.m; sourceTree = "<group>"; };
+		B295397D1F3A054400CDD73C /* Organization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Organization.h; path = ../../../repo/Organization/Organization/Organization.h; sourceTree = "<group>"; };
+		B295397E1F3A054400CDD73C /* Organization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Organization.m; path = ../../../repo/Organization/Organization/Organization.m; sourceTree = "<group>"; };
+		B29539811F3A063700CDD73C /* CreateEmployeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateEmployeeViewController.m; sourceTree = "<group>"; };
+		B29539831F3A063C00CDD73C /* CreateEmployeeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateEmployeeViewController.h; sourceTree = "<group>"; };
+		B29539851F3A08CC00CDD73C /* SavedProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SavedProtocol.h; sourceTree = "<group>"; };
 		B2A5FB3C1F31D11600F8E800 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		B2A5FB3D1F31D11600F8E800 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		B2FD0F841F30E0050065BC4D /* Organization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Organization.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,10 +55,13 @@
 		B2A5FB3F1F31E5B000F8E800 /* GUI */ = {
 			isa = PBXGroup;
 			children = (
+				B29539811F3A063700CDD73C /* CreateEmployeeViewController.m */,
+				B29539831F3A063C00CDD73C /* CreateEmployeeViewController.h */,
 				B2FD0FA51F30E2E90065BC4D /* MainViewController.h */,
 				B2FD0FA61F30E2E90065BC4D /* MainViewController.m */,
 				B2A5FB3C1F31D11600F8E800 /* DetailViewController.h */,
 				B2A5FB3D1F31D11600F8E800 /* DetailViewController.m */,
+				B29539851F3A08CC00CDD73C /* SavedProtocol.h */,
 			);
 			name = GUI;
 			sourceTree = "<group>";
@@ -102,10 +109,10 @@
 		B2FD0F9E1F30E0760065BC4D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B2078C781F320BE10072F0D6 /* Organization.h */,
-				B2078C791F320BE10072F0D6 /* Organization.m */,
-				B2078C7E1F320D220072F0D6 /* Employee.h */,
-				B2078C7F1F320D220072F0D6 /* Employee.m */,
+				B295397B1F3A054400CDD73C /* Employee.h */,
+				B295397C1F3A054400CDD73C /* Employee.m */,
+				B295397D1F3A054400CDD73C /* Organization.h */,
+				B295397E1F3A054400CDD73C /* Organization.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -181,12 +188,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B29539801F3A054400CDD73C /* Organization.m in Sources */,
+				B295397F1F3A054400CDD73C /* Employee.m in Sources */,
+				B29539821F3A063700CDD73C /* CreateEmployeeViewController.m in Sources */,
 				B2FD0FA71F30E2E90065BC4D /* MainViewController.m in Sources */,
 				B2FD0F8C1F30E0050065BC4D /* AppDelegate.m in Sources */,
 				B2FD0F891F30E0050065BC4D /* main.m in Sources */,
-				B2078C801F320D220072F0D6 /* Employee.m in Sources */,
 				B2A5FB3E1F31D11600F8E800 /* DetailViewController.m in Sources */,
-				B2078C7A1F320BE10072F0D6 /* Organization.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

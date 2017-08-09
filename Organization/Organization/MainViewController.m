@@ -22,7 +22,7 @@
         [org addEmployeeWithName:fullName];
     }
     
-    _org = org;
+    self.org = org;
     
 }
 
@@ -57,7 +57,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"showDetail"])
+    if ([segue.identifier isEqualToString:@"showDetail"])
     {
         NSIndexPath *indexSelectedRow = [self.tableView indexPathForSelectedRow];
         UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexSelectedRow];
@@ -68,11 +68,10 @@
         
     }
     
-    if ([[segue identifier] isEqualToString:@"AddUser"])
+    if ([segue.identifier isEqualToString:@"AddUser"])
     {
         CreateEmployeeViewController *controller = [segue destinationViewController];
-        
-        controller.saver = self;
+        controller.delegate = self;
     }
     
 }
@@ -89,9 +88,5 @@
     NSArray *indexArray = [NSArray arrayWithObject:path];
     [self.tableView insertRowsAtIndexPaths:indexArray withRowAnimation:UITableViewRowAnimationAutomatic];
 }
-
-
-
-
 
 @end

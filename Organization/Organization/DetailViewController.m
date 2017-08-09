@@ -1,15 +1,8 @@
-//
-//  DetailViewController.m
-//  Organization
-//
-//  Created by New user on 02.08.17.
-//  Copyright © 2017 New user. All rights reserved.
-//
-
 #import "DetailViewController.h"
 #import "Employee.h"
 
 @interface DetailViewController ()
+
 @property (weak, nonatomic) IBOutlet UILabel *detailView;
 
 @end
@@ -19,16 +12,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    if (_detailItem) {
-        NSInteger salary = _detailItem.salary;
-        NSString* information = [_detailItem.fullName stringByAppendingString:@"’s salary is "];
+    if (self.detailItem)
+    {
+        NSInteger salary = self.detailItem.salary;
+        NSString* information = [self.detailItem.fullName stringByAppendingString:@"’s salary is "];
         information = [information stringByAppendingString:[@(salary) stringValue]];
-        [_detailView setText: information];
+        [self.detailView setText: information];
     }
     
 }
-
-
 
 - (void)didReceiveMemoryWarning
 {
@@ -36,11 +28,9 @@
     
 }
 
-
-- (void)setDetailItem:(Employee *)detailItem{
-    
-        _detailItem = detailItem;
-    
+- (void)setDetailItem:(Employee *)detailItem
+{
+        self.detailItem = detailItem;
 }
 
 @end

@@ -1,8 +1,8 @@
 #import "CreateEmployeeViewController.h"
 #import "Employee.h"
 
-
 @interface CreateEmployeeViewController ()
+
 @property (weak, nonatomic) IBOutlet UITextField *firstNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *lastNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *salaryTextField;
@@ -11,23 +11,14 @@
 
 @implementation CreateEmployeeViewController
 
-- (IBAction)cancelAdding:(id)sender {
-    [self dismissViewControllerAnimated:true completion:nil];
-}
-
-
 - (IBAction)saveEmployee:(id)sender
 {
-    NSString *firstName = _firstNameTextField.text;
-    NSString *lastName = _lastNameTextField.text;
-    NSString *salary = _salaryTextField.text;
-    NSLog(@"%@", firstName);
-    NSLog(@"%@", lastName);
-    NSLog(@"%@", salary);
-    Employee* savedEmployee = [[Employee alloc] initWithFirstName:firstName lastNameInit:lastName initSalary:[salary integerValue]];
-    [_saver saveEmployee:savedEmployee];
+    NSString *firstName = self.firstNameTextField.text;
+    NSString *lastName = self.lastNameTextField.text;
+    NSString *salary = self.salaryTextField.text;
+    Employee *savedEmployee = [[Employee alloc] initWithFirstName:firstName lastNameInit:lastName initSalary:salary.integerValue];
+    [self.delegate saveEmployee:savedEmployee];
     [self dismissViewControllerAnimated:true completion:nil];
 }
-
 
 @end
