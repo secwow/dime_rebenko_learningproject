@@ -14,10 +14,10 @@
     [super viewDidLoad];
     if (self.detailItem)
     {
-        NSInteger salary = _detailItem.salary;
-        NSString* information = [_detailItem.fullName stringByAppendingString:@"’s salary is "];
+        NSInteger salary = self.detailItem.salary;
+        NSString* information = [self.detailItem.fullName stringByAppendingString:@"’s salary is "];
         information = [information stringByAppendingString:[@(salary) stringValue]];
-        [_detailView setText: information];
+        [self.detailView setText: information];
     }
     
 }
@@ -30,7 +30,7 @@
 
 - (void)setDetailItem:(Employee *)detailItem
 {
-        _detailItem = detailItem;
+        self.detailItem = detailItem;
 }
 
 @end

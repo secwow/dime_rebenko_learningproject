@@ -22,7 +22,7 @@
         [org addEmployeeWithName:fullName];
     }
     
-    _org = org;
+    self.org = org;
     
 }
 
@@ -71,7 +71,6 @@
     if ([segue.identifier isEqualToString:@"AddUser"])
     {
         CreateEmployeeViewController *controller = [segue destinationViewController];
-        
         controller.delegate = self;
     }
     
@@ -89,9 +88,5 @@
     NSArray *indexArray = [NSArray arrayWithObject:path];
     [self.tableView insertRowsAtIndexPaths:indexArray withRowAnimation:UITableViewRowAnimationAutomatic];
 }
-
-
-
-
 
 @end
