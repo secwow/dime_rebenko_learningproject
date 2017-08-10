@@ -59,7 +59,7 @@ AppDelegate *delegate;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"CellForTitle"];
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"CellForEmployee"];
     Employee *object = [self.org.empls objectAtIndex:indexPath.row];
     cell.textLabel.text = object.fullName;
     return cell;
