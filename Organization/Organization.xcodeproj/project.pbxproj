@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D246B7E1F3C8DE4002481B5 /* Organization+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D246B7D1F3C8DE4002481B5 /* Organization+Custom.m */; };
 		B2078C861F3214020072F0D6 /* CreateEmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2078C851F3214020072F0D6 /* CreateEmployeeViewController.m */; };
 		B2A479E31F3898780051DBCD /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2A479E11F3898780051DBCD /* Model.xcdatamodeld */; };
 		B2A47A101F389D7E0051DBCD /* Organization+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A47A091F389D7E0051DBCD /* Organization+CoreDataClass.m */; };
@@ -23,7 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-
+		5D246B7C1F3C8DE4002481B5 /* Organization+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Organization+Custom.h"; sourceTree = "<group>"; };
+		5D246B7D1F3C8DE4002481B5 /* Organization+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Organization+Custom.m"; sourceTree = "<group>"; };
 		B2078C841F3214020072F0D6 /* CreateEmployeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateEmployeeViewController.h; sourceTree = "<group>"; };
 		B2078C851F3214020072F0D6 /* CreateEmployeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateEmployeeViewController.m; sourceTree = "<group>"; };
 		B23CF9711F33938E00371338 /* SavedProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SavedProtocol.h; sourceTree = "<group>"; };
@@ -64,7 +66,6 @@
 		B2A5FB3F1F31E5B000F8E800 /* GUI */ = {
 			isa = PBXGroup;
 			children = (
-
 				B2078C841F3214020072F0D6 /* CreateEmployeeViewController.h */,
 				B2078C851F3214020072F0D6 /* CreateEmployeeViewController.m */,
 				B2FD0FA51F30E2E90065BC4D /* MainViewController.h */,
@@ -79,6 +80,8 @@
 		B2FD0F7B1F30E0050065BC4D = {
 			isa = PBXGroup;
 			children = (
+				5D246B7C1F3C8DE4002481B5 /* Organization+Custom.h */,
+				5D246B7D1F3C8DE4002481B5 /* Organization+Custom.m */,
 				B2A47A081F389D7E0051DBCD /* Organization+CoreDataClass.h */,
 				B2A47A091F389D7E0051DBCD /* Organization+CoreDataClass.m */,
 				B2A47A0A1F389D7E0051DBCD /* Organization+CoreDataProperties.h */,
@@ -124,18 +127,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B2FD0F9E1F30E0760065BC4D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				B295397B1F3A054400CDD73C /* Employee.h */,
-				B295397C1F3A054400CDD73C /* Employee.m */,
-				B295397D1F3A054400CDD73C /* Organization.h */,
-				B295397E1F3A054400CDD73C /* Organization.m */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -208,8 +199,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
 				B2A47A101F389D7E0051DBCD /* Organization+CoreDataClass.m in Sources */,
+				5D246B7E1F3C8DE4002481B5 /* Organization+Custom.m in Sources */,
 				B2FD0FA71F30E2E90065BC4D /* MainViewController.m in Sources */,
 				B2078C861F3214020072F0D6 /* CreateEmployeeViewController.m in Sources */,
 				B2FD0F8C1F30E0050065BC4D /* AppDelegate.m in Sources */,
