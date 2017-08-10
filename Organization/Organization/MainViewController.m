@@ -100,7 +100,6 @@ NSString* attributeName = @"name"; //genious constant
 
 - (void)saveEmployee:(NSString *) firstName lastName:(NSString *)lastName salary:(NSInteger)salary
 {
-    
     Employee *employee = [NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:[AppDelegate context]];
     employee.lastName = lastName;
     employee.firstName = firstName;

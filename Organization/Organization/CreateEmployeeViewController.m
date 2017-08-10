@@ -12,7 +12,8 @@
 
 @synthesize delegate;
 
-- (IBAction)cancelAdding:(id)sender {
+- (IBAction)cancelAdding:(id)sender
+{
     [self dismissViewControllerAnimated:true completion:nil];
 }
 
