@@ -10,7 +10,6 @@
 
 @implementation CreateEmployeeViewController
 
-@synthesize delegate;
 
 - (IBAction)cancelAdding:(id)sender
 {
@@ -22,7 +21,7 @@
     NSString *firstName = self.firstNameTextField.text;
     NSString *lastName = self.lastNameTextField.text;
     NSString *salary = self.salaryTextField.text;
-    [delegate saveEmployee:firstName lastName:lastName salary:salary.integerValue];
+    [self.delegate saveEmployee:firstName lastName:lastName salary:salary.integerValue];
     [self dismissViewControllerAnimated:true completion:nil];
 }
 

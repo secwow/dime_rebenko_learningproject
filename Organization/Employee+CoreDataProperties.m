@@ -7,11 +7,6 @@
 	return [[NSFetchRequest alloc] initWithEntityName:@"Employee"];
 }
 
--(void)setFullName:(NSString*) string
-{
-    self.fullName = string;
-}
-
 - (NSString *)fullName
 {
     return [self.firstName stringByAppendingString:self.lastName];

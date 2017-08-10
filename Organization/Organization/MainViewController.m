@@ -5,32 +5,30 @@
 #import "Organization+CoreDataClass.h"
 #import "AppDelegate.h"
 
-@interface MainViewController ()
 
-@end
 
 @implementation MainViewController
 
-@synthesize org;
-@synthesize managedObjectContext = _managedObjectContext;
-@synthesize managedObjectModel = _managedObjectModel;
-@synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+
 
 NSString* attributeValue = @"Siemens";
 NSString* attributeName = @"name"; //genious constant
-
+AppDelegate *delegate;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-  
-    NSManagedObjectContext *context = [AppDelegate context];
+    delegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+ 
+   
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Organization" inManagedObjectContext:context];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Organization" inManagedObjectContext:delegate.managedObjectContext];
     [request setEntity:entity];
-    org = [context executeFetchRequest:request error:nil] == nil ?
-                [context executeFetchRequest:request error:nil] [0] :
-                [self primaryInit:context];
+    self.org = [delegate.managedObjectContext executeFetchRequest:request error:nil] == nil ?
+                [delegate.managedObjectContext executeFetchRequest:request error:nil] [0] :
+                [self primaryInit:delegate.managedObjectContext];
+    
+    
 }
 
 - (Organization *)primaryInit:(NSManagedObjectContext *)context
@@ -38,8 +36,8 @@ NSString* attributeName = @"name"; //genious constant
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     Organization *organization = [NSEntityDescription insertNewObjectForEntityForName:@"Organization" inManagedObjectContext:context];
     organization.name = attributeValue;
-    [AppDelegate saveContext];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Organization" inManagedObjectContext:context];
+    [delegate saveContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Organization" inManagedObjectContext:delegate.managedObjectContext];
     [request setEntity:entity];
     return [context executeFetchRequest:request error:nil][0];
 }
@@ -56,14 +54,13 @@ NSString* attributeName = @"name"; //genious constant
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [org getCountEmployees];
+    return org.empls.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"CellForTitle"];
-    Employee *object = [org getEmployeeByIndex:indexPath.row];
+    Employee *object = [self.org.empls objectAtIndex:indexPath.row];
     cell.textLabel.text = object.fullName;
     return cell;
 }
@@ -75,7 +72,7 @@ NSString* attributeName = @"name"; //genious constant
         NSIndexPath *indexSelectedRow = [self.tableView indexPathForSelectedRow];
         UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexSelectedRow];
         NSString *employeeName = cell.textLabel.text;
-        Employee *object = [org getEmployeeByFullName:employeeName];
+        Employee *object = [self.org getEmployeeByFullName:employeeName];
         DetailViewController *controller = [segue destinationViewController];
         controller.detailItem = object;
     }
@@ -90,25 +87,25 @@ NSString* attributeName = @"name"; //genious constant
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(editingStyle == UITableViewCellEditingStyleDelete)
+    if (editingStyle == UITableViewCellEditingStyleDelete)
     {
-        [org removeObjectFromEmplsAtIndex:indexPath.row];
+        [self.org removeObjectFromEmplsAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-        [AppDelegate saveContext];
+        [delegate saveContext];
     }
 }
 
 - (void)saveEmployee:(NSString *) firstName lastName:(NSString *)lastName salary:(NSInteger)salary
 {
-    Employee *employee = [NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:[AppDelegate context]];
+    Employee *employee = [NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:delegate.managedObjectContext];
     employee.lastName = lastName;
     employee.firstName = firstName;
     employee.salary = salary;
-    [org addEmplsObject:employee];
-    NSIndexPath *path =[NSIndexPath indexPathForRow: org.getCountEmployees-1 inSection:0];
+    [self.org addEmplsObject:employee];
+    NSIndexPath *path =[NSIndexPath indexPathForRow:self.org.empls.count-1 inSection:0];
     NSArray *indexArray = [NSArray arrayWithObject:path];
     [self.tableView insertRowsAtIndexPaths:indexArray withRowAnimation:UITableViewRowAnimationAutomatic];
-    [AppDelegate saveContext];
+    [delegate saveContext];
 }
 
 @end

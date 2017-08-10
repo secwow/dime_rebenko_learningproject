@@ -11,14 +11,13 @@
 @synthesize managedObjectContext;
 @synthesize persistentStoreCoordinator;
 
-static NSManagedObjectContext *context;
+NSManagedObjectContext *context;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     managedObjectModel = [self getObjectModel];
     managedObjectContext = [self managedObjectContext];
     persistentStoreCoordinator = [self persistentStoreCoordinator];
-    context = managedObjectContext;
     return YES;
 }
 
@@ -76,10 +75,10 @@ static NSManagedObjectContext *context;
     return persistentStoreCoordinator;
 }
 
-+ (void)saveContext
+- (void)saveContext
 {
     NSError *error = nil;
-    NSManagedObjectContext *managedObjectctx = context;
+    NSManagedObjectContext *managedObjectctx = managedObjectContext;
     
     if(managedObjectctx != nil)
     {
@@ -92,7 +91,7 @@ static NSManagedObjectContext *context;
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-    [AppDelegate saveContext];
+    [self saveContext];
 }
 
 @end

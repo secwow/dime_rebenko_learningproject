@@ -3,8 +3,7 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-+ (NSManagedObjectContext *)context;
-+ (void)saveContext;
+- (void)saveContext;
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) NSManagedObjectModel *managedObjectModel;
