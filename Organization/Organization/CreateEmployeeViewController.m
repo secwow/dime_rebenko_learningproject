@@ -23,7 +23,7 @@
 - (void)hsDatePickerPickedDate:(NSDate *)date
 {
     self.lastPickedDate = date;
-    NSDateFormatter* formatter = [[NSDateFormatter alloc]init];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"MM/dd/yyyy"];
     NSString *result = [formatter stringFromDate:date];
     self.birthDateField.text = result;
@@ -34,10 +34,9 @@
     [super viewDidLoad];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tap];
-    
 }
 
--(void)dismissKeyboard
+- (void)dismissKeyboard
 {
     [self.view endEditing:YES];
 }
@@ -49,9 +48,7 @@
     NSString *salary = self.salaryTextField.text;
     [delegate saveEmployee:firstName lastName:lastName salary:salary.integerValue birthDate:self.lastPickedDate];
     [self.navigationController popViewControllerAnimated:YES];
-  
 }
-
 
 - (IBAction)pickDate:(id)sender
 {

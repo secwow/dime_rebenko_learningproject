@@ -1,17 +1,7 @@
-#import "Organization+CoreDataClass.h"
+#import "Organization+Custom.h"
 #import "Employee+CoreDataClass.h"
 
-@implementation Organization
-
-- (NSInteger)getCountEmployees
-{
-    return self.empls.count;
-}
-
-- (Employee *)getEmployeeByIndex:(NSInteger)index
-{
-    return [self.empls objectAtIndex:index];
-}
+@implementation Organization (CustomProperties)
 
 - (Employee *)getEmployeeByFullName:(NSString *)fullname
 {

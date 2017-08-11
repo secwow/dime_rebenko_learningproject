@@ -1,109 +1,94 @@
 #import "AppDelegate.h"
 #import "MainViewController.h"
+
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
-
-@synthesize managedObjectModel;
-@synthesize managedObjectContext;
-@synthesize persistentStoreCoordinator;
-static NSManagedObjectContext* context;
++ (AppDelegate *)instance
+{
+    return (AppDelegate *)[[UIApplication sharedApplication] delegate];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
-    managedObjectModel = [self getObjectModel];
-    managedObjectContext = [self managedObjectContext];
-    persistentStoreCoordinator = [self persistentStoreCoordinator];
-    context = managedObjectContext;
+    _managedObjectModel = [self managedObjectModel];
+    _managedObjectContext = [self managedObjectContext];
+    _persistentStoreCoordinator = [self persistentStoreCoordinator];
     return YES;
 }
 
-+ (NSManagedObjectContext *) context
+- (NSManagedObjectModel *)managedObjectModel
 {
-    return context;
-}
 
-- (NSManagedObjectModel *) getObjectModel
-{
-    if(managedObjectModel!=nil)
+    if (_managedObjectModel != nil)
     {
-        return managedObjectModel;
-    }		
-    
+        return _managedObjectModel;
+    }
+
     NSURL *nsurl = [[NSBundle mainBundle] URLForResource:@"Model" withExtension:@"momd"];
-    managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:nsurl];
-    return managedObjectModel;
+    _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:nsurl];
+    return _managedObjectModel;
 }
 
 - (NSManagedObjectContext *)managedObjectContext
 {
-    
-    if(managedObjectContext != nil){
-        return managedObjectContext;
-    }
-    
-    NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
-    
-    if(coordinator != nil){
-        managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType: NSMainQueueConcurrencyType];
-        [managedObjectContext setPersistentStoreCoordinator:coordinator];
-    }
-    
-    return managedObjectContext;
-}
 
+    if (_managedObjectContext != nil)
+    {
+        return _managedObjectContext;
+    }
+
+    NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
+
+    if (coordinator != nil)
+    {
+        _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+        [_managedObjectContext setPersistentStoreCoordinator:coordinator];
+    }
+
+    return _managedObjectContext;
+}
 
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator
 {
-    
-    if(persistentStoreCoordinator != nil)
+    if (_persistentStoreCoordinator != nil)
     {
-        return persistentStoreCoordinator;
+        return _persistentStoreCoordinator;
     }
-    
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Employer.sqlite"];
+
+    NSURL *docDirectory = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+    NSURL *storeURL = [docDirectory URLByAppendingPathComponent:@"Emploer.sqlite"];
     NSError *error = nil;
-    persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel: managedObjectModel];
-    
-    if(![persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error])
+    _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:_managedObjectModel];
+
+    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error])
     {
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
-    
-    return persistentStoreCoordinator;
+
+    return self.persistentStoreCoordinator;
 }
 
-- (NSURL *)applicationDocumentsDirectory
-{
-    return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
-}
-
-+ (void)saveContext
+- (void)saveContext
 {
     NSError *error = nil;
-    NSManagedObjectContext *managedObjectctx = context;
-    
-    if(managedObjectctx != nil)
+    NSManagedObjectContext *managedObjectctx = _managedObjectContext;
+
+    if (managedObjectctx != nil)
     {
-        if([managedObjectctx hasChanges] && ![managedObjectctx save:&error])
+        if ([managedObjectctx hasChanges] && ![managedObjectctx save:&error])
         {
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
     }
-    
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-    
-    [AppDelegate saveContext];
+    [self saveContext];
 }
-
 
 @end

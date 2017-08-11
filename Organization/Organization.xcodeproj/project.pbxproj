@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		37B7F31FC2F61AF8D7EBBE3A /* libPods-Organization.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B0E471B87159232EF60FAE5 /* libPods-Organization.a */; };
+		5DE43A471F3DC3D6004AF852 /* Organization+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE43A461F3DC3D6004AF852 /* Organization+Custom.m */; };
 		B2078C861F3214020072F0D6 /* CreateEmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2078C851F3214020072F0D6 /* CreateEmployeeViewController.m */; };
 		B2A479E31F3898780051DBCD /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2A479E11F3898780051DBCD /* Model.xcdatamodeld */; };
 		B2A47A101F389D7E0051DBCD /* Organization+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A47A091F389D7E0051DBCD /* Organization+CoreDataClass.m */; };
@@ -26,6 +27,8 @@
 /* Begin PBXFileReference section */
 		0B0E471B87159232EF60FAE5 /* libPods-Organization.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Organization.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CFFDFB9D4BAE42801FDC986 /* Pods-Organization.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Organization.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Organization/Pods-Organization.debug.xcconfig"; sourceTree = "<group>"; };
+		5DE43A451F3DC3CF004AF852 /* Organization+Custom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Organization+Custom.h"; sourceTree = "<group>"; };
+		5DE43A461F3DC3D6004AF852 /* Organization+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Organization+Custom.m"; sourceTree = "<group>"; };
 		71713BC876DBFE5FEC74CA05 /* Pods-Organization.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Organization.release.xcconfig"; path = "Pods/Target Support Files/Pods-Organization/Pods-Organization.release.xcconfig"; sourceTree = "<group>"; };
 		B2078C841F3214020072F0D6 /* CreateEmployeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateEmployeeViewController.h; sourceTree = "<group>"; };
 		B2078C851F3214020072F0D6 /* CreateEmployeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateEmployeeViewController.m; sourceTree = "<group>"; };
@@ -91,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				B2A47A081F389D7E0051DBCD /* Organization+CoreDataClass.h */,
+				5DE43A461F3DC3D6004AF852 /* Organization+Custom.m */,
+				5DE43A451F3DC3CF004AF852 /* Organization+Custom.h */,
 				B2A47A091F389D7E0051DBCD /* Organization+CoreDataClass.m */,
 				B2A47A0A1F389D7E0051DBCD /* Organization+CoreDataProperties.h */,
 				B2A47A0B1F389D7E0051DBCD /* Organization+CoreDataProperties.m */,
@@ -270,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2A47A101F389D7E0051DBCD /* Organization+CoreDataClass.m in Sources */,
+				5DE43A471F3DC3D6004AF852 /* Organization+Custom.m in Sources */,
 				B2FD0FA71F30E2E90065BC4D /* MainViewController.m in Sources */,
 				B2078C861F3214020072F0D6 /* CreateEmployeeViewController.m in Sources */,
 				B2FD0F8C1F30E0050065BC4D /* AppDelegate.m in Sources */,
