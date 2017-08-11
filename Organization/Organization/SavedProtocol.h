@@ -2,6 +2,6 @@
 
 @protocol SaveEmployeeProtocol <NSObject>
 
-- (void)saveEmployee:(Employee *)empl;
+- (void)saveEmployee:(NSString *)firstName lastName:(NSString *)lastName salary:(NSInteger)salary;
 
 @end

@@ -1,5 +1,4 @@
 #import "CreateEmployeeViewController.h"
-#import "Employee.h"
 
 @interface CreateEmployeeViewController ()
 
@@ -11,13 +10,17 @@
 
 @implementation CreateEmployeeViewController
 
+- (IBAction)cancelAdding:(id)sender
+{
+    [self dismissViewControllerAnimated:true completion:nil];
+}
+
 - (IBAction)saveEmployee:(id)sender
 {
     NSString *firstName = self.firstNameTextField.text;
     NSString *lastName = self.lastNameTextField.text;
     NSString *salary = self.salaryTextField.text;
-    Employee *savedEmployee = [[Employee alloc] initWithFirstName:firstName lastNameInit:lastName initSalary:salary.integerValue];
-    [self.delegate saveEmployee:savedEmployee];
+    [self.delegate saveEmployee:firstName lastName:lastName salary:salary.integerValue];
     [self dismissViewControllerAnimated:true completion:nil];
 }
 

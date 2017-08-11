@@ -3,6 +3,6 @@
 
 @interface CreateEmployeeViewController : UIViewController
 
-@property (nonatomic) id <SaveEmployeeProtocol> delegate;
+@property (nonatomic, weak) id<SaveEmployeeProtocol> delegate;
 
 @end
