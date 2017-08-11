@@ -12,10 +12,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     if (self.detailItem)
     {
-        NSString *information = [NSString stringWithFormat:@"@%@ salary is %i", self.detailItem.fullName, self.detailItem.salary];
+        NSString *information = [NSString stringWithFormat:@"%@ salary is %i", self.detailItem.fullName, self.detailItem.salary];
         [self.detailView setText:information];
     }
 }
