@@ -15,14 +15,16 @@
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Organization" inManagedObjectContext:delegate.managedObjectContext];
     [request setEntity:entity];
-    if ([delegate.managedObjectContext executeFetchRequest:request error:nil])
+    NSArray *organizations = [delegate.managedObjectContext executeFetchRequest:request error:nil];
+    if (organizations && organizations.count >= 1)
     {
-        self.org = [delegate.managedObjectContext executeFetchRequest:request error:nil][0];
+        self.org = organizations[0];
     }
     else
     {
         self.org = [self primaryInit:delegate.managedObjectContext];
     }
+
 }
 
 - (Organization *)primaryInit:(NSManagedObjectContext *)context
