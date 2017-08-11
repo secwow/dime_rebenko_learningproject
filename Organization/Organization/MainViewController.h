@@ -4,7 +4,7 @@
 @class Employee;
 @class Organization;
 
-@interface MainViewController : UITableViewController<UITableViewDataSource, SaveEmployeeProtocol, NSFetchedResultsControllerDelegate>
+@interface MainViewController : UITableViewController <UITableViewDataSource, SaveEmployeeProtocol, NSFetchedResultsControllerDelegate>
 
 @property (strong, nonatomic) Organization *org;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;

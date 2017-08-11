@@ -9,29 +9,20 @@
 
 @implementation DetailViewController
 
-@synthesize detailItem;
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    if (detailItem)
-    {
-        NSInteger salary = detailItem.salary;
-        NSString* information = [detailItem.fullName stringByAppendingString:@"’s salary is "];
-        information = [information stringByAppendingString:[@(salary) stringValue]];
-        [self.detailView setText: information];
-    }
     
+    if (self.detailItem)
+    {
+        NSString *information = [NSString stringWithFormat:@"%@ salary is %i", self.detailItem.fullName, self.detailItem.salary];
+        [self.detailView setText:information];
+    }
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-}
-
-- (void)setDetailItem:(Employee *)inputDetailItem
-{
-        detailItem = inputDetailItem;
 }
 
 @end

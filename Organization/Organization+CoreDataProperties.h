@@ -1,13 +1,4 @@
-//
-//  Organization+CoreDataProperties.h
-//  Organization
-//
-//  Created by New user on 08.08.17.
-//  Copyright © 2017 New user. All rights reserved.
-//
-
 #import "Organization+CoreDataClass.h"
-
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,7 +8,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, nonatomic, copy) NSString *name;
 @property (nullable, nonatomic, retain) NSOrderedSet<Employee *> *empls;
-
 
 @end
 
@@ -33,7 +23,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)removeEmplsObject:(Employee *)value;
 - (void)addEmpls:(NSOrderedSet<Employee *> *)values;
 - (void)removeEmpls:(NSOrderedSet<Employee *> *)values;
-
 
 @end
 
