@@ -7,7 +7,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *lastNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *salaryTextField;
 @property (weak, nonatomic) IBOutlet UITextField *birthDateField;
-@property (retain, nonatomic) NSDate *lastPickedDate;
+@property (weak, nonatomic) NSDate *lastPickedDate;
 
 @end
 
