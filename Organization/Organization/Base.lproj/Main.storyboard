@@ -26,11 +26,7 @@
                                 <rect key="frame" x="16" y="20" width="268" height="44"/>
                                 <items>
                                     <navigationItem title="Add employee" id="DQQ-9L-Dqf">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="GjA-R8-pFV">
-                                            <connections>
-                                                <action selector="cancelAdding:" destination="jj6-q4-7hG" id="zpt-fC-Q85"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="GjA-R8-pFV"/>
                                         <barButtonItem key="rightBarButtonItem" title="Save" id="jbv-6a-VUd">
                                             <connections>
                                                 <action selector="saveEmployee:" destination="jj6-q4-7hG" id="sRc-Az-NQW"/>
@@ -149,9 +145,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nKH-ob-R4m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="805.79710144927537" y="-419.02173913043481"/>
+            <point key="canvasLocation" x="806" y="-419"/>
         </scene>
-        <!--Employees-->
+        <!--Root View Controller-->
         <scene sceneID="9P8-Sb-Odi">
             <objects>
                 <tableViewController id="mcu-iE-dlK" customClass="MainViewController" sceneMemberID="viewController">
@@ -186,7 +182,7 @@
                             <outlet property="delegate" destination="mcu-iE-dlK" id="8JS-Cl-yfF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Employees" id="zwv-TP-Vrb">
+                    <navigationItem key="navigationItem" title="Root View Controller" id="zwv-TP-Vrb">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="B4p-74-hHu">
                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
@@ -211,22 +207,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="detailInfo" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fnh-2N-I7a">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="detailInfo" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fnh-2N-I7a">
                                 <rect key="frame" x="0.0" y="274" width="320" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Fnh-2N-I7a" firstAttribute="centerX" secondItem="vtF-u3-l8f" secondAttribute="centerX" id="7K6-kq-1v7"/>
-                            <constraint firstAttribute="trailing" secondItem="Fnh-2N-I7a" secondAttribute="trailing" id="HgO-GQ-mXP"/>
-                            <constraint firstItem="Fnh-2N-I7a" firstAttribute="centerX" secondItem="vtF-u3-l8f" secondAttribute="centerX" id="MoC-Yk-Jje"/>
-                            <constraint firstItem="Fnh-2N-I7a" firstAttribute="leading" secondItem="vtF-u3-l8f" secondAttribute="leading" id="SSH-lJ-mxu"/>
-                            <constraint firstItem="Fnh-2N-I7a" firstAttribute="centerY" secondItem="vtF-u3-l8f" secondAttribute="centerY" id="WRV-Ce-Gwx"/>
-                            <constraint firstItem="Fnh-2N-I7a" firstAttribute="centerX" secondItem="vtF-u3-l8f" secondAttribute="centerX" id="bKx-4M-3e9"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Azz-iy-4gd"/>
                     <connections>

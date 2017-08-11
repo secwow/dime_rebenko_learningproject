@@ -1,5 +1,6 @@
 #import "Organization+CoreDataProperties.h"
 #import "Employee+CoreDataClass.h"
+
 @implementation Organization (CoreDataProperties)
 
 + (NSFetchRequest<Organization *> *)fetchRequest
