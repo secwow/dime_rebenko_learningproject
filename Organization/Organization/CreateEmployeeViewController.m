@@ -13,8 +13,6 @@
 
 @implementation CreateEmployeeViewController
 
-@synthesize delegate;
-
 - (IBAction)cancelAdding:(id)sender
 {
     [self dismissViewControllerAnimated:true completion:nil];
@@ -46,7 +44,7 @@
     NSString *firstName = self.firstNameTextField.text;
     NSString *lastName = self.lastNameTextField.text;
     NSString *salary = self.salaryTextField.text;
-    [delegate saveEmployee:firstName lastName:lastName salary:salary.integerValue birthDate:self.lastPickedDate];
+    [self.delegate saveEmployee:firstName lastName:lastName salary:salary.integerValue birthDate:self.lastPickedDate];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
