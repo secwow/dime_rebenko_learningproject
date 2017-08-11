@@ -4,5 +4,5 @@
 @class Employee;
 
 @interface Organization (CustomProperties)
-- (Employee *)getEmployeeByFullName:(NSString *) fullname;
+- (Employee *)getEmployeeByFullName:(NSString *)fullname;
 @end

@@ -5,7 +5,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Employee (CoreDataProperties)
 
 + (NSFetchRequest<Employee *> *)fetchRequest;
-- (NSString*)fullName;
+- (NSString *)fullName;
 
 @property (nullable, nonatomic, copy) NSString *firstName;
 @property (nullable, nonatomic, copy) NSString *lastName;

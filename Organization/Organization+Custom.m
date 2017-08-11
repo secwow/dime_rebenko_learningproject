@@ -7,7 +7,7 @@
 {
     for (Employee *empl in self.empls)
     {
-        if([empl.fullName isEqualToString:fullname])
+        if ([empl.fullName isEqualToString:fullname])
         {
             return empl;
         }

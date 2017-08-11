@@ -4,6 +4,7 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 - (void)saveContext;
++ (AppDelegate *)instance;
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) NSManagedObjectModel *managedObjectModel;
@@ -11,4 +12,3 @@
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @end
-
