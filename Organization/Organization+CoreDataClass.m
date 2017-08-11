@@ -3,5 +3,4 @@
 
 @implementation Organization
 
-
 @end
