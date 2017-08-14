@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RSC-Ed-ynd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RSC-Ed-ynd">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -183,6 +183,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="zwv-TP-Vrb">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="pBZ-OS-fYa">
+                            <connections>
+                                <segue destination="arh-B2-jZZ" kind="popoverPresentation" identifier="editOrg" popoverAnchorBarButtonItem="pBZ-OS-fYa" id="A0H-ti-WIt">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="B4p-74-hHu">
                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
@@ -225,6 +232,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fl3-j1-Jts" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="807" y="241"/>
+        </scene>
+        <!--Organization Info View Controller-->
+        <scene sceneID="ahE-Ki-M92">
+            <objects>
+                <viewController id="arh-B2-jZZ" customClass="OrganizationInfoViewController" customModule="Organization" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="az4-OR-jyT"/>
+                        <viewControllerLayoutGuide type="bottom" id="LwJ-nr-UoA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jDK-cv-2gV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acx-rQ-yrO">
+                                <rect key="frame" x="88" y="115" width="144" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.32663560075592613" green="0.65558715391521738" blue="1" alpha="0.49914722711267606" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Calculate salary sum"/>
+                                <connections>
+                                    <action selector="showDialog:" destination="arh-B2-jZZ" eventType="touchDown" id="OHD-uX-wQf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="miJ-VS-8xz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828.75" y="1014.0845070422536"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nt7-nZ-Cp8">

@@ -4,6 +4,7 @@
 #import "Employee+CoreDataClass.h"
 #import "Organization+CoreDataClass.h"
 #import "AppDelegate.h"
+#import "Organization-Swift.h"
 
 @implementation MainViewController
 
@@ -73,6 +74,12 @@
     {
         CreateEmployeeViewController *controller = [segue destinationViewController];
         controller.delegate = self;
+    }
+    
+    if ([segue.identifier isEqualToString:@"editOrg"])
+    {
+        OrganizationInfoViewController *controller = [segue destinationViewController];
+        [controller setOrganization:self.org];
     }
 }
 
