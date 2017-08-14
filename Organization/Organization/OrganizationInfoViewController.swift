@@ -21,6 +21,7 @@ class OrganizationInfoViewController: UIViewController
         {
             salarySum+=(empl as! Employee).salary;
         }
+        
         let dialog = UIAlertController(title: "Salart sum \(salarySum)", message: "salary summ", preferredStyle: UIAlertControllerStyle.alert);
         let confirmButton = UIAlertAction(title: "OK", style: .default, handler: nil)
         dialog.addAction(confirmButton)
