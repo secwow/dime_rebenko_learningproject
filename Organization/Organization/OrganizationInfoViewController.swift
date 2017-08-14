@@ -1,7 +1,7 @@
 import UIKit
 
-class OrganizationInfoViewController: UIViewController {
-    
+class OrganizationInfoViewController: UIViewController
+{
     var organization: Organization?
     var salarySum: Int32=0
     
@@ -27,6 +27,12 @@ class OrganizationInfoViewController: UIViewController {
         self.present(dialog, animated: true)
     }
 
+    @IBAction func randomizeOrder(_ sender: Any)
+    {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue:"tableRandomize"), object: nil);
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()

@@ -15,4 +15,15 @@
     return nil;
 }
 
+- (void)mixingOrderEmployees
+{
+    NSMutableArray *emplers = [self.empls.mutableCopy allObjects].mutableCopy;
+    for(int i=0; i < emplers.count; i++)
+    {
+        int n = arc4random_uniform(emplers.count-i) + i;
+        [emplers exchangeObjectAtIndex:i withObjectAtIndex:n];
+    }
+    self.empls = [NSOrderedSet orderedSetWithArray:emplers];
+}
+
 @end

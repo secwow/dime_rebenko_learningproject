@@ -80,7 +80,15 @@
     {
         OrganizationInfoViewController *controller = [segue destinationViewController];
         [controller setOrganization:self.org];
+        [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(tableRandomize) name:@"tableRandomize" object:nil];
     }
+    
+}
+
+- (void)tableRandomize
+{
+    [self.org mixingOrderEmployees];
+    [self.tableView reloadData];
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
