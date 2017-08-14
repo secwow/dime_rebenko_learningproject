@@ -1,11 +1,12 @@
 import UIKit
 
-class OrganizationInfoViewController: UIViewController {
+class OrganizationInfoViewController: UIViewController
+{
     
     var organization: Organization?
     var salarySum: Int32=0
     
-    func setOrganization(org:Organization)
+    func setOrganization(org: Organization)
     {
         organization = org;
     }
