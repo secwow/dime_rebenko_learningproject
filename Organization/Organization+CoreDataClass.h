@@ -13,4 +13,3 @@ NS_ASSUME_NONNULL_END
 
 #import "Organization+CoreDataProperties.h"
 #import "Organization+Custom.h"
-    

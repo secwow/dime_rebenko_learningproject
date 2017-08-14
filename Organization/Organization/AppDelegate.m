@@ -60,7 +60,7 @@
     }
 
     NSURL *docDirectory = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
-    NSURL *storeURL = [docDirectory URLByAppendingPathComponent:@"Employeeer.sqlite"];
+    NSURL *storeURL = [docDirectory URLByAppendingPathComponent:@"Emploer.sqlite"];
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:_managedObjectModel];
 

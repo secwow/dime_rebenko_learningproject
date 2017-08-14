@@ -15,9 +15,10 @@
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Organization" inManagedObjectContext:delegate.managedObjectContext];
     [request setEntity:entity];
-    if ([delegate.managedObjectContext executeFetchRequest:request error:nil])
+    NSArray *organizations = [delegate.managedObjectContext executeFetchRequest:request error:nil];
+    if (organizations.count >= 1)
     {
-        self.org = [delegate.managedObjectContext executeFetchRequest:request error:nil][0];
+        self.org = organizations[0];
     }
     else
     {
@@ -85,14 +86,15 @@
     }
 }
 
-- (void)saveEmployee:(NSString *)firstName lastName:(NSString *)lastName salary:(NSInteger)salary
+- (void)saveEmployee:(NSString *)firstName lastName:(NSString *)lastName salary:(NSInteger)salary birthDate:(NSDate *)date
 {
     Employee *employee = [NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:[AppDelegate instance].managedObjectContext];
     employee.lastName = lastName;
     employee.firstName = firstName;
     employee.salary = salary;
+    employee.birthDate = date;
     [self.org addEmplsObject:employee];
-    NSIndexPath *path = [NSIndexPath indexPathForRow:self.org.empls.count - 1 inSection:0];
+    NSIndexPath *path = [NSIndexPath indexPathForRow:self.org.empls.count-1 inSection:0];
     NSArray *indexArray = [NSArray arrayWithObject:path];
     [self.tableView insertRowsAtIndexPaths:indexArray withRowAnimation:UITableViewRowAnimationAutomatic];
     [[AppDelegate instance] saveContext];

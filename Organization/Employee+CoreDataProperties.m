@@ -15,6 +15,7 @@
 @dynamic firstName;
 @dynamic lastName;
 @dynamic salary;
+@dynamic birthDate;
 @dynamic org;
 
 @end
