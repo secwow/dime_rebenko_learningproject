@@ -265,7 +265,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Fetch organizations"/>
                                 <connections>
-                                    <action selector="fetchOrganization:" destination="arh-B2-jZZ" eventType="touchDown" id="Vge-Wc-RdP"/>
+                                    <action selector="fetchOrganization:" destination="arh-B2-jZZ" eventType="touchDown" id="dRj-bj-abr"/>
                                 </connections>
                             </button>
                         </subviews>

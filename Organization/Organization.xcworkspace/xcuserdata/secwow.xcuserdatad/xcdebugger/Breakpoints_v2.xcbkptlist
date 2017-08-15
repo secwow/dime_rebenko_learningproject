@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Organization/MainViewController.m"
-            timestampString = "524412858.028842"
+            timestampString = "524495322.351853"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "-tableRandomize"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Organization/MainViewController.m"
-            timestampString = "524412858.436729"
+            timestampString = "524495322.351853"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "-tableRandomize"
             landmarkType = "7">
          </BreakpointContent>
@@ -91,6 +91,38 @@
             endingLineNumber = "5"
             landmarkName = "RequestManager"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Organization.RequestManager.init () -&gt; Organization.RequestManager"
+                  moduleName = "Organization"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/secwow/dime_rebenko_learningproject/Organization/Organization/RequestManager.swift"
+                  timestampString = "524503063.053247"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "5"
+                  endingLineNumber = "5"
+                  offsetFromSymbolStart = "66">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Organization.RequestManager.__allocating_init () -&gt; Organization.RequestManager"
+                  moduleName = "Organization"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/secwow/dime_rebenko_learningproject/Organization/Organization/RequestManager.swift"
+                  timestampString = "524503063.05545"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "3">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -114,12 +146,106 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Organization/RequestManager.swift"
-            timestampString = "524417872.077664"
+            timestampString = "524493879.267547"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "11"
             endingLineNumber = "11"
-            landmarkName = "fetchOrganizations(String:)"
+            landmarkName = "fetchOrganizations(closure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Organization/OrganizationInfoViewController.swift"
+            timestampString = "524494780.17357"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "7"
+            endingLineNumber = "7"
+            landmarkName = "OrganizationInfoViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Organization.OrganizationInfoViewController.delegate.getter : Swift.Optional&lt;__ObjC.SaveEmployeeProtocol&gt;"
+                  moduleName = "Organization"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/secwow/dime_rebenko_learningproject/Organization/Organization/OrganizationInfoViewController.swift"
+                  timestampString = "524495323.458701"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "7"
+                  endingLineNumber = "7"
+                  offsetFromSymbolStart = "38">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Organization.OrganizationInfoViewController.delegate.setter : Swift.Optional&lt;__ObjC.SaveEmployeeProtocol&gt;"
+                  moduleName = "Organization"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/secwow/dime_rebenko_learningproject/Organization/Organization/OrganizationInfoViewController.swift"
+                  timestampString = "524495323.460015"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "7"
+                  endingLineNumber = "7"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Organization.OrganizationInfoViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Organization.OrganizationInfoViewController"
+                  moduleName = "Organization"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/secwow/dime_rebenko_learningproject/Organization/Organization/OrganizationInfoViewController.swift"
+                  timestampString = "524495323.461302"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "7"
+                  endingLineNumber = "7"
+                  offsetFromSymbolStart = "164">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Organization.OrganizationInfoViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Organization.OrganizationInfoViewController&gt;"
+                  moduleName = "Organization"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/secwow/dime_rebenko_learningproject/Organization/Organization/OrganizationInfoViewController.swift"
+                  timestampString = "524495323.462449"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "7"
+                  endingLineNumber = "7"
+                  offsetFromSymbolStart = "100">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Organization/OrganizationInfoViewController.swift"
+            timestampString = "524503061.951557"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "worker(dictionary:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -130,75 +256,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Organization/OrganizationInfoViewController.swift"
-            timestampString = "524482450.140581"
+            timestampString = "524503030.486889"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "5"
-            endingLineNumber = "5"
-            landmarkName = "OrganizationInfoViewController"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Organization.OrganizationInfoViewController.organization.getter : Swift.Optional&lt;__ObjC.Organization&gt;"
-                  moduleName = "Organization"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/secwow/dime_rebenko_learningproject/Organization/Organization/OrganizationInfoViewController.swift"
-                  timestampString = "524482450.495204"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "6"
-                  endingLineNumber = "6"
-                  offsetFromSymbolStart = "38">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Organization.OrganizationInfoViewController.organization.setter : Swift.Optional&lt;__ObjC.Organization&gt;"
-                  moduleName = "Organization"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/secwow/dime_rebenko_learningproject/Organization/Organization/OrganizationInfoViewController.swift"
-                  timestampString = "524482450.496798"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "6"
-                  endingLineNumber = "6"
-                  offsetFromSymbolStart = "76">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Organization.OrganizationInfoViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Organization.OrganizationInfoViewController"
-                  moduleName = "Organization"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/secwow/dime_rebenko_learningproject/Organization/Organization/OrganizationInfoViewController.swift"
-                  timestampString = "524482450.497825"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "6"
-                  endingLineNumber = "6"
-                  offsetFromSymbolStart = "77">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Organization.OrganizationInfoViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Organization.OrganizationInfoViewController&gt;"
-                  moduleName = "Organization"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/secwow/dime_rebenko_learningproject/Organization/Organization/OrganizationInfoViewController.swift"
-                  timestampString = "524482450.49885"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "6"
-                  endingLineNumber = "6"
-                  offsetFromSymbolStart = "37">
-               </Location>
-            </Locations>
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "worker(dictionary:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

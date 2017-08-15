@@ -80,6 +80,7 @@
     {
         OrganizationInfoViewController *controller = [segue destinationViewController];
         controller.organization = self.org;
+        controller.delegate = self;
         [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(tableRandomize) name:controller.tableMixingNotificationName object:nil];
     }
     
@@ -102,7 +103,34 @@
     }
 }
 
-- (void)saveEmployee:(NSString *)firstName lastName:(NSString *)lastName salary:(NSInteger)salary birthDate:(NSDate *)date
+- (Organization *)getOrganizationByName:(NSString *)orgName
+{
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Organization" inManagedObjectContext:[AppDelegate instance].managedObjectContext];
+    [request setEntity:entity];
+    [request setPredicate:[NSPredicate predicateWithFormat:@"name == %@", orgName]];
+    NSArray *result = [[AppDelegate instance].managedObjectContext executeFetchRequest:request error:nil];
+    if(result && result.count!=0)
+    {
+        return result[0];
+    }
+    return nil;
+}
+
+- (Organization * )saveOrganization:(NSString *)orgName
+{
+    Organization *tempOrg = [self getOrganizationByName:orgName];
+    if(tempOrg)
+    {
+        return tempOrg;
+    }
+    Organization *organization = [NSEntityDescription insertNewObjectForEntityForName:@"Organization" inManagedObjectContext:[AppDelegate instance].managedObjectContext];
+    organization.name = orgName;
+    [[AppDelegate instance] saveContext];
+    return organization;
+}
+
+- (Employee *)saveEmployee:(NSString *)firstName lastName:(NSString *)lastName salary:(NSInteger)salary birthDate:(NSDate *)date
 {
     Employee *employee = [NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:[AppDelegate instance].managedObjectContext];
     employee.lastName = lastName;
@@ -114,6 +142,15 @@
     NSArray *indexArray = [NSArray arrayWithObject:path];
     [self.tableView insertRowsAtIndexPaths:indexArray withRowAnimation:UITableViewRowAnimationAutomatic];
     [[AppDelegate instance] saveContext];
+    return employee;
+}
+
+- (NSArray<Organization *> *)getAllOrganization
+{
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Organization" inManagedObjectContext:[AppDelegate instance].managedObjectContext];
+    [request setEntity:entity];
+    return [[AppDelegate instance].managedObjectContext executeFetchRequest:request error:nil];
 }
 
 @end
