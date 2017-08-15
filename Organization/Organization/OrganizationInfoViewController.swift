@@ -2,27 +2,20 @@ import UIKit
 
 class OrganizationInfoViewController: UIViewController
 {
-    var organization: Organization?
-    var salarySum: Int32=0
-    
-    func setOrganization(org: Organization)
-    {
-        organization = org;
-    }
-    
-    override func viewDidLoad()
-    {
-        super.viewDidLoad()
-    }
+    public var organization: Organization?
+    private var salarySum: Int32 = 0
+    public let tableMixingNotificationName = "tableRandomize";
     
     @IBAction func showDialog(_ sender: Any)
     {
-        for empl in (organization?.empls)!
+        guard let empls = organization?.empls else
         {
-            salarySum+=(empl as! Employee).salary;
+            return
         }
         
-        let dialog = UIAlertController(title: "Salart sum \(salarySum)", message: "salary summ", preferredStyle: UIAlertControllerStyle.alert);
+        let org = empls.array.map{$0 as! Employee}
+        salarySum = org.reduce(0, {result, employee in result+employee.salary})
+        let dialog = UIAlertController(title: "Salart sum \(salarySum)", message: "salary summ", preferredStyle: .alert);
         let confirmButton = UIAlertAction(title: "OK", style: .default, handler: nil)
         dialog.addAction(confirmButton)
         self.present(dialog, animated: true)
@@ -30,13 +23,7 @@ class OrganizationInfoViewController: UIViewController
 
     @IBAction func randomizeOrder(_ sender: Any)
     {
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue:"tableRandomize"), object: nil);
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: tableMixingNotificationName), object: nil);
         self.dismiss(animated: true, completion: nil)
-    }
-    
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
-        
     }
 }

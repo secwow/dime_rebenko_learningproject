@@ -79,8 +79,8 @@
     if ([segue.identifier isEqualToString:@"editOrg"])
     {
         OrganizationInfoViewController *controller = [segue destinationViewController];
-        [controller setOrganization:self.org];
-        [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(tableRandomize) name:@"tableRandomize" object:nil];
+        controller.organization = self.org;
+        [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(tableRandomize) name:controller.tableMixingNotificationName object:nil];
     }
     
 }
@@ -89,6 +89,7 @@
 {
     [self.org mixingOrderEmployees];
     [self.tableView reloadData];
+    [NSNotificationCenter.defaultCenter removeObserver:self];
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
