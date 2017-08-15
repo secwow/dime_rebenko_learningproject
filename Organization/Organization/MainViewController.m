@@ -79,7 +79,7 @@
     if ([segue.identifier isEqualToString:@"editOrg"])
     {
         OrganizationInfoViewController *controller = [segue destinationViewController];
-        [controller setOrganization:self.org];
+        controller.organization = self.org;
     }
 }
 

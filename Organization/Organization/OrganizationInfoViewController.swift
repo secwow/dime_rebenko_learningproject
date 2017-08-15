@@ -3,34 +3,20 @@ import UIKit
 class OrganizationInfoViewController: UIViewController
 {
     
-    var organization: Organization?
-    var salarySum: Int32=0
-    
-    func setOrganization(org: Organization)
-    {
-        organization = org;
-    }
-    
-    override func viewDidLoad()
-    {
-        super.viewDidLoad()
-    }
+    public var organization: Organization?
+    private var salarySum: Int32 = 0
     
     @IBAction func showDialog(_ sender: Any)
     {
-        for empl in (organization?.empls)!
-        {
-            salarySum+=(empl as! Employee).salary;
+        guard let empls = organization?.empls else {
+            return
         }
-        let dialog = UIAlertController(title: "Salart sum \(salarySum)", message: "salary summ", preferredStyle: UIAlertControllerStyle.alert);
+        
+        let org = empls.array.map{$0 as! Employee}
+        salarySum = org.reduce(0, {result, employee in result+employee.salary})
+        let dialog = UIAlertController(title: "Salart sum \(salarySum)", message: "salary summ", preferredStyle: .alert);
         let confirmButton = UIAlertAction(title: "OK", style: .default, handler: nil)
         dialog.addAction(confirmButton)
         self.present(dialog, animated: true)
-    }
-
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
-        
     }
 }
