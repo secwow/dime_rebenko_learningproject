@@ -34,6 +34,12 @@ class OrganizationInfoViewController: UIViewController
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func fetchOrganization(_ sender: Any)
+    {
+       RequestManager.fetchOrganizations(String: "http://gitlab.faifly.com/ios-general/ios-tutorial/uploads/ffffec34fa4a727922bb1e09cc24b21d/tutorial.json" as AnyObject)
+        
+    }
+    
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()

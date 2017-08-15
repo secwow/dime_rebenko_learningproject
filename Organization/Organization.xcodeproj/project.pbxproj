@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		37B7F31FC2F61AF8D7EBBE3A /* libPods-Organization.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B0E471B87159232EF60FAE5 /* libPods-Organization.a */; };
+		08CE20A219ED1E851A719854 /* Pods_Organization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58A4A03AA4267DDE6EBBC374 /* Pods_Organization.framework */; };
 		5DE43A471F3DC3D6004AF852 /* Organization+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE43A461F3DC3D6004AF852 /* Organization+Custom.m */; };
 		5DFF88221F41D783009B672C /* OrganizationInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFF88211F41D783009B672C /* OrganizationInfoViewController.swift */; };
+		5DFF88241F41EFD2009B672C /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFF88231F41EFD2009B672C /* RequestManager.swift */; };
 		B2078C861F3214020072F0D6 /* CreateEmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2078C851F3214020072F0D6 /* CreateEmployeeViewController.m */; };
 		B2A479E31F3898780051DBCD /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2A479E11F3898780051DBCD /* Model.xcdatamodeld */; };
 		B2A47A101F389D7E0051DBCD /* Organization+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A47A091F389D7E0051DBCD /* Organization+CoreDataClass.m */; };
@@ -26,12 +27,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0B0E471B87159232EF60FAE5 /* libPods-Organization.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Organization.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CFFDFB9D4BAE42801FDC986 /* Pods-Organization.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Organization.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Organization/Pods-Organization.debug.xcconfig"; sourceTree = "<group>"; };
+		58A4A03AA4267DDE6EBBC374 /* Pods_Organization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Organization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DE43A451F3DC3CF004AF852 /* Organization+Custom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Organization+Custom.h"; sourceTree = "<group>"; };
 		5DE43A461F3DC3D6004AF852 /* Organization+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Organization+Custom.m"; sourceTree = "<group>"; };
 		5DFF881D1F41D644009B672C /* Organization-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Organization-Bridging-Header.h"; sourceTree = "<group>"; };
 		5DFF88211F41D783009B672C /* OrganizationInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationInfoViewController.swift; sourceTree = "<group>"; };
+		5DFF88231F41EFD2009B672C /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		71713BC876DBFE5FEC74CA05 /* Pods-Organization.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Organization.release.xcconfig"; path = "Pods/Target Support Files/Pods-Organization/Pods-Organization.release.xcconfig"; sourceTree = "<group>"; };
 		B2078C841F3214020072F0D6 /* CreateEmployeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateEmployeeViewController.h; sourceTree = "<group>"; };
 		B2078C851F3214020072F0D6 /* CreateEmployeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateEmployeeViewController.m; sourceTree = "<group>"; };
@@ -64,7 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37B7F31FC2F61AF8D7EBBE3A /* libPods-Organization.a in Frameworks */,
+				08CE20A219ED1E851A719854 /* Pods_Organization.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +76,7 @@
 		217ADB8B88439E9D3932DB40 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0B0E471B87159232EF60FAE5 /* libPods-Organization.a */,
+				58A4A03AA4267DDE6EBBC374 /* Pods_Organization.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				5DFF88211F41D783009B672C /* OrganizationInfoViewController.swift */,
+				5DFF88231F41EFD2009B672C /* RequestManager.swift */,
 			);
 			name = Swift;
 			sourceTree = "<group>";
@@ -241,13 +244,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Organization-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B335EEFC001BE76944AAE150 /* [CP] Copy Pods Resources */ = {
@@ -271,9 +277,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Organization/Pods-Organization-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/HSDatePickerViewController/HSDatePickerViewController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HSDatePickerViewController.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -289,6 +300,7 @@
 			files = (
 				B2A47A101F389D7E0051DBCD /* Organization+CoreDataClass.m in Sources */,
 				5DE43A471F3DC3D6004AF852 /* Organization+Custom.m in Sources */,
+				5DFF88241F41EFD2009B672C /* RequestManager.swift in Sources */,
 				B2FD0FA71F30E2E90065BC4D /* MainViewController.m in Sources */,
 				B2078C861F3214020072F0D6 /* CreateEmployeeViewController.m in Sources */,
 				B2FD0F8C1F30E0050065BC4D /* AppDelegate.m in Sources */,
