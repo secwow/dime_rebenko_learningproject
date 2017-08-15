@@ -6,5 +6,5 @@
 @interface Organization (CustomProperties)
 
 - (Employee *)getEmployeeByFullName:(NSString *)fullname;
-
+- (void)mixingOrderEmployees;
 @end

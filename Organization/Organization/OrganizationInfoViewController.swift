@@ -2,9 +2,9 @@ import UIKit
 
 class OrganizationInfoViewController: UIViewController
 {
-    
     public var organization: Organization?
     private var salarySum: Int32 = 0
+    public let tableMixingNotificationName = "tableRandomize";
     
     @IBAction func showDialog(_ sender: Any)
     {
@@ -19,5 +19,11 @@ class OrganizationInfoViewController: UIViewController
         let confirmButton = UIAlertAction(title: "OK", style: .default, handler: nil)
         dialog.addAction(confirmButton)
         self.present(dialog, animated: true)
+    }
+
+    @IBAction func randomizeOrder(_ sender: Any)
+    {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: tableMixingNotificationName), object: nil);
+        self.dismiss(animated: true, completion: nil)
     }
 }

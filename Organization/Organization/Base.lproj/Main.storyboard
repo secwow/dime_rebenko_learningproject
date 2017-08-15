@@ -185,9 +185,7 @@
                     <navigationItem key="navigationItem" title="Root View Controller" id="zwv-TP-Vrb">
                         <barButtonItem key="leftBarButtonItem" systemItem="edit" id="pBZ-OS-fYa">
                             <connections>
-                                <segue destination="arh-B2-jZZ" kind="popoverPresentation" identifier="editOrg" popoverAnchorBarButtonItem="pBZ-OS-fYa" id="A0H-ti-WIt">
-                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                </segue>
+                                <segue destination="arh-B2-jZZ" kind="showDetail" identifier="editOrg" id="A0H-ti-WIt"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="B4p-74-hHu">
@@ -252,6 +250,14 @@
                                 <state key="normal" title="Calculate salary sum"/>
                                 <connections>
                                     <action selector="showDialog:" destination="arh-B2-jZZ" eventType="touchDown" id="OHD-uX-wQf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSG-ve-bYb">
+                                <rect key="frame" x="88" y="153" width="144" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Randomize order"/>
+                                <connections>
+                                    <action selector="randomizeOrder:" destination="arh-B2-jZZ" eventType="touchDown" id="J8O-jx-9PF"/>
                                 </connections>
                             </button>
                         </subviews>
