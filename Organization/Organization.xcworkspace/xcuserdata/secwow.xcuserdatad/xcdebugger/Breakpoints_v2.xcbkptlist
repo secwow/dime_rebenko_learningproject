@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Organization/MainViewController.m"
-            timestampString = "524495322.351853"
+            timestampString = "524567719.632155"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "-tableRandomize"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Organization/MainViewController.m"
-            timestampString = "524495322.351853"
+            timestampString = "524567719.632155"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "-tableRandomize"
             landmarkType = "7">
          </BreakpointContent>
@@ -100,7 +100,7 @@
                   moduleName = "Organization"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/secwow/dime_rebenko_learningproject/Organization/Organization/RequestManager.swift"
-                  timestampString = "524503063.053247"
+                  timestampString = "524568356.82583"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "5"
@@ -115,7 +115,7 @@
                   moduleName = "Organization"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/secwow/dime_rebenko_learningproject/Organization/Organization/RequestManager.swift"
-                  timestampString = "524503063.05545"
+                  timestampString = "524568356.82743"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -240,12 +240,60 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Organization/OrganizationInfoViewController.swift"
-            timestampString = "524503061.951557"
+            timestampString = "524567719.632155"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "worker(dictionary:)"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "jsonHandler(dictionary:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Organization/OrganizationInfoViewController.swift"
+            timestampString = "524567719.632155"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "jsonHandler(dictionary:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Organization/OrganizationInfoViewController.swift"
+            timestampString = "524567719.632155"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "creteAndShow(orgs:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Organization/OrganizationInfoViewController.swift"
+            timestampString = "524567719.632155"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "creteAndShow(orgs:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -255,13 +303,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Organization/OrganizationInfoViewController.swift"
-            timestampString = "524503030.486889"
+            filePath = "Organization/MainViewController.m"
+            timestampString = "524567719.632155"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "worker(dictionary:)"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "-reloadWithNewOrganization:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Organization/MainViewController.m"
+            timestampString = "524567789.756168"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "-reloadWithNewOrganization:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

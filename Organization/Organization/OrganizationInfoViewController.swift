@@ -6,7 +6,9 @@ class OrganizationInfoViewController: UIViewController, UITableViewDelegate, UIT
     public var organization: Organization?
     public var delegate: DataAccessProtocol?
     public let tableMixingNotificationName = "tableRandomize";
-    public var organizations: NSArray?
+    public let reloadTableWithOrganizationName = "reloadWithOrganization";
+    public var organizations: [Organization]?
+    public var orgTable: UITableView?
     
     @IBAction func showDialog(_ sender: Any)
     {
@@ -25,10 +27,10 @@ class OrganizationInfoViewController: UIViewController, UITableViewDelegate, UIT
 
     @IBAction func fetchOrganization(_ sender: Any)
     {
-        RequestManager.fetchOrganizations(closure: worker)
+        RequestManager.fetchOrganizations(closure: jsonHandler)
     }
     
-    func worker(dictionary : [String : AnyObject])
+    func jsonHandler(dictionary : [String : AnyObject])
     {
         guard let delegate = self.delegate else
         {
@@ -62,32 +64,46 @@ class OrganizationInfoViewController: UIViewController, UITableViewDelegate, UIT
                         let employee = delegate.saveEmployee(firstName, lastName: lastName, salary: salary, birthDate: nil)
                         org.addEmplsObject(employee!)
                     }
-                    
                 }
                 
             }
         }
-        organizations = delegate.getAllOrganization()! as NSArray;
-        
+        organizations = delegate.getAllOrganization();
+        creteAndShow(orgs: organizations!)
+    }
+
+    func creteAndShow(orgs: [Organization])
+    {
+        let barHeight: CGFloat = UIApplication.shared.statusBarFrame.size.height
+        let displayWidth: CGFloat = self.view.frame.width
+        let displayHeight: CGFloat = self.view.frame.height
+        orgTable = UITableView(frame: CGRect(x: 0, y: barHeight, width: displayWidth, height: displayHeight-barHeight))
+        orgTable?.register(UITableViewCell.self, forCellReuseIdentifier: "orgCell")
+        orgTable?.dataSource = self
+        orgTable?.delegate = self
+        self.view.addSubview(orgTable!)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        
+        let cell = self.orgTable?.cellForRow(at: indexPath);
+        let orgName = cell!.textLabel?.text!
+        NotificationCenter.default.post(name:Notification.Name(rawValue:reloadTableWithOrganizationName), object: nil, userInfo: ["name": orgName!])
+        self.dismiss(animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
+        
         return organizations!.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath as IndexPath)
-        cell.textLabel!.text = "\(String(describing: organizations?[indexPath.row]))"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "orgCell", for: indexPath as IndexPath)
+        cell.textLabel!.text =  organizations?[indexPath.row].name
         return cell
     }
-    
     
     @IBAction func randomizeOrder(_ sender: Any)
     {

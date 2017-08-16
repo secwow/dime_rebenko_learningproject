@@ -43,7 +43,7 @@
     NSString *firstName = self.firstNameTextField.text;
     NSString *lastName = self.lastNameTextField.text;
     NSString *salary = self.salaryTextField.text;
-    [self.delegate saveEmployee:firstName lastName:lastName salary:salary.integerValue birthDate:self.lastPickedDate];
+    [self.delegate saveEmployeeWithRefreshing:firstName lastName:lastName salary:salary.integerValue birthDate:self.lastPickedDate];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
