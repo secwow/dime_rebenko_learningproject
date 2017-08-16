@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Organization/MainViewController.m"
-            timestampString = "524567719.632155"
+            timestampString = "524575139.990248"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "-tableRandomize"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Organization/MainViewController.m"
-            timestampString = "524567719.632155"
+            timestampString = "524575139.990248"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "-tableRandomize"
             landmarkType = "7">
          </BreakpointContent>
@@ -100,7 +100,7 @@
                   moduleName = "Organization"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/secwow/dime_rebenko_learningproject/Organization/Organization/RequestManager.swift"
-                  timestampString = "524568356.82583"
+                  timestampString = "524576008.72908"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "5"
@@ -115,7 +115,7 @@
                   moduleName = "Organization"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/secwow/dime_rebenko_learningproject/Organization/Organization/RequestManager.swift"
-                  timestampString = "524568356.82743"
+                  timestampString = "524576008.730735"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -146,13 +146,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Organization/RequestManager.swift"
-            timestampString = "524493879.267547"
+            timestampString = "524576007.616371"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "11"
-            endingLineNumber = "11"
+            startingLineNumber = "8"
+            endingLineNumber = "8"
             landmarkName = "fetchOrganizations(closure:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Organization.RequestManager.fetchOrganizations (closure : (Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Organization"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/secwow/dime_rebenko_learningproject/Organization/Organization/RequestManager.swift"
+                  timestampString = "524576008.734504"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "8"
+                  endingLineNumber = "8"
+                  offsetFromSymbolStart = "79">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Organization.RequestManager.(fetchOrganizations (closure : (Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "Organization"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/secwow/dime_rebenko_learningproject/Organization/Organization/RequestManager.swift"
+                  timestampString = "524576008.735809"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "9"
+                  endingLineNumber = "9"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -256,44 +288,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Organization/OrganizationInfoViewController.swift"
-            timestampString = "524567719.632155"
+            timestampString = "524575139.990248"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "jsonHandler(dictionary:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Organization/OrganizationInfoViewController.swift"
-            timestampString = "524567719.632155"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
-            landmarkName = "creteAndShow(orgs:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Organization/OrganizationInfoViewController.swift"
-            timestampString = "524567719.632155"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "creteAndShow(orgs:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -304,11 +304,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Organization/MainViewController.m"
-            timestampString = "524567719.632155"
+            timestampString = "524575139.990248"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "-reloadWithNewOrganization:"
             landmarkType = "7">
          </BreakpointContent>
@@ -320,11 +320,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Organization/MainViewController.m"
-            timestampString = "524567789.756168"
+            timestampString = "524575139.990248"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "-reloadWithNewOrganization:"
             landmarkType = "7">
          </BreakpointContent>
