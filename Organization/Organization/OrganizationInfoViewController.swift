@@ -1,4 +1,4 @@
-    import UIKit
+import UIKit
 
 class OrganizationInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
@@ -65,7 +65,6 @@ class OrganizationInfoViewController: UIViewController, UITableViewDelegate, UIT
                         org.addEmplsObject(employee!)
                     }
                 }
-                
             }
         }
         organizations = delegate.getAllOrganization();
