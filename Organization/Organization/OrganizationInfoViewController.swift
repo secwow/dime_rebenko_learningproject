@@ -1,4 +1,6 @@
 import UIKit
+import BigInt
+import SVProgressHUD
 
 class OrganizationInfoViewController: UIViewController
 {
@@ -47,6 +49,7 @@ class OrganizationInfoViewController: UIViewController
                 {
                     currentOrganization = self.delegate?.saveOrganization(value as! String)
                 }
+                
                 if key as! String == "employees"
                 {
                     guard let org = currentOrganization else
@@ -86,6 +89,35 @@ class OrganizationInfoViewController: UIViewController
         }
         
         self.present(actionDialog, animated: true)
+    }
+    
+    func FibonacciN(n: Int) -> BigInt {
+        
+        var firstNumber: BigInt = 1
+        var secondNumber: BigInt  = 1
+        
+        for _ in 0...n
+        {
+            let temp = secondNumber;
+            secondNumber+=firstNumber
+            firstNumber = temp;
+        }
+        
+        return secondNumber;
+    }
+    
+    @IBAction func calculateAsyn(_ sender: Any)
+    {
+        SVProgressHUD.show()
+        DispatchQueue.global(qos: .background).async
+            {
+            let result = self.FibonacciN(n: 100000)
+            print(result)
+            DispatchQueue.main.sync
+            {
+                SVProgressHUD.dismiss()
+            }
+        }
     }
     
     @IBAction func randomizeOrder(_ sender: Any)
