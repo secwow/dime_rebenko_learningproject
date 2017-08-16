@@ -1,6 +1,6 @@
 import UIKit
 
-class OrganizationInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+class OrganizationInfoViewController: UIViewController
 {
     private var salarySum: Int32 = 0
     public var organization: Organization?
@@ -32,7 +32,7 @@ class OrganizationInfoViewController: UIViewController, UITableViewDelegate, UIT
     
     func jsonHandler(dictionary : [String : AnyObject])
     {
-        guard let delegate = self.delegate else
+        guard self.delegate != nil else
         {
             return
         }
@@ -45,7 +45,7 @@ class OrganizationInfoViewController: UIViewController, UITableViewDelegate, UIT
                 
                 if key as! String == "name"
                 {
-                    currentOrganization = delegate.saveOrganization(value as! String)
+                    currentOrganization = self.delegate?.saveOrganization(value as! String)
                 }
                 if key as! String == "employees"
                 {
@@ -61,47 +61,31 @@ class OrganizationInfoViewController: UIViewController, UITableViewDelegate, UIT
                         let lastName = dicemp["last_name"] as! String
                         var salary: Int = 0;
                         salary = (dicemp["salary"] is Int) ? (dicemp["salary"] as! Int) : 0;
-                        let employee = delegate.saveEmployee(firstName, lastName: lastName, salary: salary, birthDate: nil)
+                        let employee = self.delegate?.saveEmployee(firstName, lastName: lastName, salary: salary, birthDate: nil)
                         org.addEmplsObject(employee!)
                     }
                 }
             }
         }
-        organizations = delegate.getAllOrganization();
-        creteAndShow(orgs: organizations!)
+        organizations = self.delegate?.getAllOrganization()
+        createAndShow(orgs: organizations!)
     }
 
-    func creteAndShow(orgs: [Organization])
+    func createAndShow(orgs: [Organization])
     {
-        let barHeight: CGFloat = UIApplication.shared.statusBarFrame.size.height
-        let displayWidth: CGFloat = self.view.frame.width
-        let displayHeight: CGFloat = self.view.frame.height
-        orgTable = UITableView(frame: CGRect(x: 0, y: barHeight, width: displayWidth, height: displayHeight-barHeight))
-        orgTable?.register(UITableViewCell.self, forCellReuseIdentifier: "orgCell")
-        orgTable?.dataSource = self
-        orgTable?.delegate = self
-        self.view.addSubview(orgTable!)
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
-    {
-        let cell = self.orgTable?.cellForRow(at: indexPath);
-        let orgName = cell!.textLabel?.text!
-        NotificationCenter.default.post(name:Notification.Name(rawValue:reloadTableWithOrganizationName), object: nil, userInfo: ["name": orgName!])
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
+        let actionDialog = UIAlertController(title: "Organizations", message: "Please, choose organization", preferredStyle: .actionSheet)
         
-        return organizations!.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-    {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "orgCell", for: indexPath as IndexPath)
-        cell.textLabel!.text =  organizations?[indexPath.row].name
-        return cell
+        for org in orgs
+        {
+            let orgItem = UIAlertAction(title: org.name, style: .default, handler: {
+                (alert: UIAlertAction!) -> Void in
+                NotificationCenter.default.post(name:Notification.Name(rawValue:self.reloadTableWithOrganizationName), object: nil, userInfo: ["name": alert.title!])
+                self.dismiss(animated: true, completion: nil)
+            })
+            actionDialog.addAction(orgItem)
+        }
+        
+        self.present(actionDialog, animated: true)
     }
     
     @IBAction func randomizeOrder(_ sender: Any)
