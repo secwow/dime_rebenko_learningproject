@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>BigInt.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>HSDatePickerViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -19,10 +24,20 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SipHash.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>111B66715A02D0F11C56B42ED5060BA4</key>
+		<key>6CA28E5940E09F6CFD9BEC3BB70E8CFB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -32,7 +47,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>BFA772B68CD8AF0D368928DEE1B96948</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>CB37792879AFEB40A9BB515BF6949CD5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EFCC82E3A2141C948652BEEDB1AAC8C7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FF118F81D324ADF4FA377EE6EA9A9E75</key>
 		<dict>
 			<key>primary</key>
 			<true/>
