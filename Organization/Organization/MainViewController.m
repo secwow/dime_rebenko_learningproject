@@ -80,15 +80,28 @@
     {
         OrganizationInfoViewController *controller = [segue destinationViewController];
         controller.organization = self.org;
+        controller.delegate = self;
         [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(tableRandomize) name:controller.tableMixingNotificationName object:nil];
+        [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(reloadWithNewOrganization:) name:controller.reloadTableWithOrganizationName object:nil];
     }
-    
 }
 
 - (void)tableRandomize
 {
     [self.org mixingOrderEmployees];
     [self.tableView reloadData];
+    [NSNotificationCenter.defaultCenter removeObserver:self];
+}
+
+- (void)reloadWithNewOrganization:(NSNotification *)notification
+{
+    NSString *orgName = notification.userInfo[@"name"];
+    Organization *tempOrg = [self getOrganizationByName:orgName];
+    if (tempOrg){
+        self.org = tempOrg;
+        [self.tableView reloadData];
+    }
+
     [NSNotificationCenter.defaultCenter removeObserver:self];
 }
 
@@ -102,18 +115,64 @@
     }
 }
 
-- (void)saveEmployee:(NSString *)firstName lastName:(NSString *)lastName salary:(NSInteger)salary birthDate:(NSDate *)date
+- (Organization *)getOrganizationByName:(NSString *)orgName
+{
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Organization" inManagedObjectContext:[AppDelegate instance].managedObjectContext];
+    [request setEntity:entity];
+    [request setPredicate:[NSPredicate predicateWithFormat:@"name == %@", orgName]];
+    NSArray *result = [[AppDelegate instance].managedObjectContext executeFetchRequest:request error:nil];
+    
+    if (result && result.count!=0)
+    {
+        return result[0];
+    }
+    
+    return nil;
+}
+
+- (Organization *)saveOrganization:(NSString *)orgName
+{
+    Organization *tempOrg = [self getOrganizationByName:orgName];
+    
+    if (tempOrg)
+    {
+        return tempOrg;
+    }
+    
+    Organization *organization = [NSEntityDescription insertNewObjectForEntityForName:@"Organization" inManagedObjectContext:[AppDelegate instance].managedObjectContext];
+    organization.name = orgName;	
+    [[AppDelegate instance] saveContext];
+    return organization;
+}
+
+- (Employee *)saveEmployeeWithRefreshing:(NSString *)firstName lastName:(NSString *)lastName salary:(NSInteger)salary birthDate:(NSDate *)date
+{
+    Employee *employee = [self saveEmployee:firstName lastName:lastName salary:salary birthDate:date];
+    [self.org addEmplsObject:employee];
+    NSIndexPath *path = [NSIndexPath indexPathForRow:self.org.empls.count-1 inSection:0];
+    NSArray *indexArray = [NSArray arrayWithObject:path];
+    [self.tableView insertRowsAtIndexPaths:indexArray withRowAnimation:UITableViewRowAnimationAutomatic];
+    return employee;
+}
+
+- (Employee *)saveEmployee:(NSString *)firstName lastName:(NSString *)lastName salary:(NSInteger)salary birthDate:(NSDate *)date
 {
     Employee *employee = [NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:[AppDelegate instance].managedObjectContext];
     employee.lastName = lastName;
     employee.firstName = firstName;
     employee.salary = salary;
     employee.birthDate = date;
-    [self.org addEmplsObject:employee];
-    NSIndexPath *path = [NSIndexPath indexPathForRow:self.org.empls.count-1 inSection:0];
-    NSArray *indexArray = [NSArray arrayWithObject:path];
-    [self.tableView insertRowsAtIndexPaths:indexArray withRowAnimation:UITableViewRowAnimationAutomatic];
     [[AppDelegate instance] saveContext];
+    return employee;
+}
+
+- (NSArray<Organization *> *)getAllOrganization
+{
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Organization" inManagedObjectContext:[AppDelegate instance].managedObjectContext];
+    [request setEntity:entity];
+    return [[AppDelegate instance].managedObjectContext executeFetchRequest:request error:nil];
 }
 
 @end

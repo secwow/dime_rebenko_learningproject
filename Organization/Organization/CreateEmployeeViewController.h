@@ -4,6 +4,6 @@
 
 @interface CreateEmployeeViewController : UIViewController <HSDatePickerViewControllerDelegate>
 
-@property (nonatomic, weak) id<SaveEmployeeProtocol> delegate;
+@property (nonatomic, weak) id<DataAccessProtocol> delegate;
 
 @end

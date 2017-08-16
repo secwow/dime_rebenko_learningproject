@@ -5,7 +5,7 @@
 @class Employee;
 @class Organization;
 
-@interface MainViewController : UITableViewController <UITableViewDataSource, SaveEmployeeProtocol>
+@interface MainViewController : UITableViewController <UITableViewDataSource, DataAccessProtocol>
 
 @property (strong, nonatomic) Organization *org;
 

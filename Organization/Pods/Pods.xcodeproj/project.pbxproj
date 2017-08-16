@@ -7,110 +7,174 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		28E7483A4CF338C56C51C7F9A66CCB46 /* HSDatePickerViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4043D21B09F46F45A6D297F2D385E939 /* HSDatePickerViewController-dummy.m */; };
-		5F0BF57D672C0DAF0C92E983F83DBF39 /* HSDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A8FF73DD817385EE9CA0E56DDBE853 /* HSDatePickerViewController.m */; };
-		98219895BFE9DADF8B3AA2599D6F8AF6 /* Pods-Organization-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A7110DA03D6AC2939049AFEAB6742160 /* Pods-Organization-dummy.m */; };
-		BCD820A50F769F9611AC81F3F5740DF6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		C95F7F7F3FB1038C7A48BBAA1755CD34 /* HSDatePickerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F20B34291DDC72D326A6DFA4865A81D0 /* HSDatePickerViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E88AD6A0A43BE803489F6EE7CE4941B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B230F03249B517417C4DD2467B134C /* Timeline.swift */; };
+		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 42737ED98CCAF87A68FAE6B02CD7DF34 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17737BCC0FC11AD8A7407FC5D382EFD3 /* TaskDelegate.swift */; };
+		39FB3ABB3EAE99174873DC30DB6C4CBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59262C7B539D3915327B86D66788A40B /* Request.swift */; };
+		5FB9668EE5F04AD1295176BA0D633297 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728FCF9438E2218F1C976B496C6BAA70 /* DispatchQueue+Alamofire.swift */; };
+		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441C27985A808EB1ECCB481DB4F7E27 /* ServerTrustPolicy.swift */; };
+		6D1F02C88E49763933FE2C80C40B373F /* HSDatePickerViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE8F7D2426D67446FF7FE141C08C16 /* HSDatePickerViewController-dummy.m */; };
+		73B9C996AED49ED7CF8EC2A6F1738059 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		74E45C8ABFCBFC6A1990B73BC52DFB40 /* Pods-Organization-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 848B254A2085A89F38407D68B5447140 /* Pods-Organization-dummy.m */; };
+		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C770ECA6B7AD84A1EA372D485500D0 /* SessionDelegate.swift */; };
+		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444F4575446CDCADE46A8CDA4B897960 /* Result.swift */; };
+		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907427FF596F0028CD71F0E5BA5187C5 /* AFError.swift */; };
+		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E8533D6C490CD8359E204A0189451 /* NetworkReachabilityManager.swift */; };
+		A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DF12396DA4911DE36CC64A5F611FE278 /* Alamofire-dummy.m */; };
+		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C13D1E04630DC80A1133AF39F2CEE7 /* SessionManager.swift */; };
+		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3636A630248F015A20662967D3B92CA /* MultipartFormData.swift */; };
+		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30D57E13893E9F242BEE270D4FE8BA9 /* Validation.swift */; };
+		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B14071495C5BD3820E86795C737036B /* ParameterEncoding.swift */; };
+		C418FB1D71A76CB7A3DDF53607C3FACC /* Pods-Organization-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AA518B95455EBF9CC3940709CFA93000 /* Pods-Organization-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187315EE3FE653351D226271582BF17D /* Response.swift */; };
+		D041E67B1EE271E3336B7707DDC4DB57 /* HSDatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03AFC962850ECA07C505DEF12350E67D /* HSDatePickerViewController.xib */; };
+		DD6BC68FAB02339AA7F69E0342E085E9 /* HSDatePickerViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EE713C8DA3F2150E86BBD2F4D7328C2F /* HSDatePickerViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC0AAE4D83756EFE701B6E3360439B04 /* HSDatePickerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B790D2F5A652A163AA0D1337AC1E3772 /* HSDatePickerViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D8F2A5553C2CFAEBD16752FD27379C /* Notifications.swift */; };
+		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1CED201ECC65FD86617834FF6F37CC /* ResponseSerialization.swift */; };
+		F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E38BC18A013094CD48479B20656D0F1 /* Alamofire.swift */; };
+		FC9EF7011275F6098A5CD5A3B1A0E6C3 /* HSDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D30F69E749F258DE3CAFE6D25DA0136E /* HSDatePickerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5AE4065FAB5702DB06E9CA570CC2AA0A /* PBXContainerItemProxy */ = {
+		1E2D2FEC65D499304A7A9C9C08708A68 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C42630B2C5CE9EBC52F895E367A87286;
+			remoteGlobalIDString = CB37792879AFEB40A9BB515BF6949CD5;
 			remoteInfo = HSDatePickerViewController;
+		};
+		2DFFE362E015AAD16777BCB5D0E7C0B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88E9EC28B8B46C3631E6B242B50F4442;
+			remoteInfo = Alamofire;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1AE25CD3127688A2F0E7FCFE252EA817 /* libHSDatePickerViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libHSDatePickerViewController.a; path = libHSDatePickerViewController.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		1F4AD156175A6AC689AFE0494486E02C /* libPods-Organization.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Organization.a"; path = "libPods-Organization.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		38480BFFB22F8AEB63CD09F0A2E41664 /* Pods-Organization-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Organization-frameworks.sh"; sourceTree = "<group>"; };
-		4043D21B09F46F45A6D297F2D385E939 /* HSDatePickerViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HSDatePickerViewController-dummy.m"; sourceTree = "<group>"; };
-		44AC6650AAA33C22C6C22D7B2BB3328C /* HSDatePickerViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HSDatePickerViewController.xcconfig; sourceTree = "<group>"; };
-		492AE854E68DBE58BB1D84D5FD42393E /* Pods-Organization-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Organization-acknowledgements.markdown"; sourceTree = "<group>"; };
-		5D0DEBA501ED3EA0A4246776B9E0BE39 /* HSDatePickerViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = HSDatePickerViewController.xib; path = HSDatePickerViewControllerDemo/HSDatePickerViewController/HSDatePickerViewController.xib; sourceTree = "<group>"; };
-		904531BD73617ADA474E07A9DBC8C3BE /* Pods-Organization.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Organization.debug.xcconfig"; sourceTree = "<group>"; };
+		03AFC962850ECA07C505DEF12350E67D /* HSDatePickerViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = HSDatePickerViewController.xib; path = HSDatePickerViewControllerDemo/HSDatePickerViewController/HSDatePickerViewController.xib; sourceTree = "<group>"; };
+		065DB5B619AE75CD7400D9C69978C870 /* Pods-Organization.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Organization.debug.xcconfig"; sourceTree = "<group>"; };
+		0E38BC18A013094CD48479B20656D0F1 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		154E8533D6C490CD8359E204A0189451 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		17737BCC0FC11AD8A7407FC5D382EFD3 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
+		187315EE3FE653351D226271582BF17D /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		2BFBC0E67CD6FFE41BD3052789880445 /* HSDatePickerViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HSDatePickerViewController-prefix.pch"; sourceTree = "<group>"; };
+		2E1CED201ECC65FD86617834FF6F37CC /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		3B6276D4294ED5556EE9CF8CA6F9395F /* Pods-Organization-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Organization-acknowledgements.markdown"; sourceTree = "<group>"; };
+		41DA5B046AE1709326A7325ADF1E8177 /* Pods-Organization-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Organization-resources.sh"; sourceTree = "<group>"; };
+		42737ED98CCAF87A68FAE6B02CD7DF34 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		444F4575446CDCADE46A8CDA4B897960 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		4589AE78B3D2B8149F1366ED9CEABD2C /* Pods-Organization-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Organization-frameworks.sh"; sourceTree = "<group>"; };
+		48C770ECA6B7AD84A1EA372D485500D0 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
+		4A18BD3C232EACDB2D583C18C2F4A6A1 /* Pods-Organization-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Organization-acknowledgements.plist"; sourceTree = "<group>"; };
+		4E26DF9238B19EBF4E40DC6A32A4CC54 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		4E66BE0B27759FCF8FE224BDC875109A /* Pods_Organization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Organization.framework; path = "Pods-Organization.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		558F35740A23D3173019CB99B60AE6C5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59262C7B539D3915327B86D66788A40B /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		5B14071495C5BD3820E86795C737036B /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		62C13D1E04630DC80A1133AF39F2CEE7 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		70555F93F82EAE05DE00AC11CB0CEBB3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		708754136B163FF20CBBAFD1E03B5FD8 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		728FCF9438E2218F1C976B496C6BAA70 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		770F2CE5C5032F32200FFF8977983273 /* HSDatePickerViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = HSDatePickerViewController.modulemap; sourceTree = "<group>"; };
+		7755EFDCF85628937AB3FFC2258F417E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77CA746846D6FFD5D202CBEC9C4BE395 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		7ADC3B6ADBE3BA585CB1B93432B41BF7 /* Pods-Organization.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Organization.modulemap"; sourceTree = "<group>"; };
+		7D243A608E80A699D081B37BAAB2B07A /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		8441C27985A808EB1ECCB481DB4F7E27 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		848B254A2085A89F38407D68B5447140 /* Pods-Organization-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Organization-dummy.m"; sourceTree = "<group>"; };
+		907427FF596F0028CD71F0E5BA5187C5 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9FECBB8FFEF65B23BB3C9EF7C319274C /* Pods-Organization-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Organization-resources.sh"; sourceTree = "<group>"; };
-		A7110DA03D6AC2939049AFEAB6742160 /* Pods-Organization-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Organization-dummy.m"; sourceTree = "<group>"; };
-		AD885EF6A70F6B0D392DE7068DBD7438 /* Pods-Organization-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Organization-acknowledgements.plist"; sourceTree = "<group>"; };
-		BC0193C06E52CC879798FF79F2595C08 /* HSDatePickerViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HSDatePickerViewController-prefix.pch"; sourceTree = "<group>"; };
-		C3A8FF73DD817385EE9CA0E56DDBE853 /* HSDatePickerViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HSDatePickerViewController.m; path = HSDatePickerViewControllerDemo/HSDatePickerViewController/HSDatePickerViewController.m; sourceTree = "<group>"; };
-		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		EBDE64C1078DFEA502909A612B64053E /* Pods-Organization.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Organization.release.xcconfig"; sourceTree = "<group>"; };
-		F20B34291DDC72D326A6DFA4865A81D0 /* HSDatePickerViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HSDatePickerViewController.h; path = HSDatePickerViewControllerDemo/HSDatePickerViewController/HSDatePickerViewController.h; sourceTree = "<group>"; };
+		98D8F2A5553C2CFAEBD16752FD27379C /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		9CBE8F7D2426D67446FF7FE141C08C16 /* HSDatePickerViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HSDatePickerViewController-dummy.m"; sourceTree = "<group>"; };
+		AA518B95455EBF9CC3940709CFA93000 /* Pods-Organization-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Organization-umbrella.h"; sourceTree = "<group>"; };
+		B790D2F5A652A163AA0D1337AC1E3772 /* HSDatePickerViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HSDatePickerViewController.h; path = HSDatePickerViewControllerDemo/HSDatePickerViewController/HSDatePickerViewController.h; sourceTree = "<group>"; };
+		C30D57E13893E9F242BEE270D4FE8BA9 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		D30F69E749F258DE3CAFE6D25DA0136E /* HSDatePickerViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HSDatePickerViewController.m; path = HSDatePickerViewControllerDemo/HSDatePickerViewController/HSDatePickerViewController.m; sourceTree = "<group>"; };
+		DF12396DA4911DE36CC64A5F611FE278 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		E3636A630248F015A20662967D3B92CA /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		E714A59CC31FF793E5B6DD14E554718B /* Pods-Organization.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Organization.release.xcconfig"; sourceTree = "<group>"; };
+		EE713C8DA3F2150E86BBD2F4D7328C2F /* HSDatePickerViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HSDatePickerViewController-umbrella.h"; sourceTree = "<group>"; };
+		F3B230F03249B517417C4DD2467B134C /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
+		FA21113D55FBC5E5A1EB819A392B4FE4 /* HSDatePickerViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HSDatePickerViewController.framework; path = HSDatePickerViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD629B3B44B3F4FABD276F9DDD61CE38 /* HSDatePickerViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HSDatePickerViewController.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AF4315DA645BB7607BF6B0B1BF3C2908 /* Frameworks */ = {
+		55090CA199BBEDB08BBD8658F171ED36 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E88AD6A0A43BE803489F6EE7CE4941B1 /* Foundation.framework in Frameworks */,
+				39FB3ABB3EAE99174873DC30DB6C4CBD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DEA83AACFB5AABA9D30ED235D8E0AF86 /* Frameworks */ = {
+		975F33472556C24B0902E16AF03BE2D7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCD820A50F769F9611AC81F3F5740DF6 /* Foundation.framework in Frameworks */,
+				5FB9668EE5F04AD1295176BA0D633297 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99195E4207764744AEC07ECCBCD550EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73B9C996AED49ED7CF8EC2A6F1738059 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		29517B88D5073B24C7470E83A07FE417 /* Pods-Organization */ = {
+		10FD835BF978B3C643173A4D20D743B9 /* HSDatePickerViewController */ = {
 			isa = PBXGroup;
 			children = (
-				492AE854E68DBE58BB1D84D5FD42393E /* Pods-Organization-acknowledgements.markdown */,
-				AD885EF6A70F6B0D392DE7068DBD7438 /* Pods-Organization-acknowledgements.plist */,
-				A7110DA03D6AC2939049AFEAB6742160 /* Pods-Organization-dummy.m */,
-				38480BFFB22F8AEB63CD09F0A2E41664 /* Pods-Organization-frameworks.sh */,
-				9FECBB8FFEF65B23BB3C9EF7C319274C /* Pods-Organization-resources.sh */,
-				904531BD73617ADA474E07A9DBC8C3BE /* Pods-Organization.debug.xcconfig */,
-				EBDE64C1078DFEA502909A612B64053E /* Pods-Organization.release.xcconfig */,
+				B790D2F5A652A163AA0D1337AC1E3772 /* HSDatePickerViewController.h */,
+				D30F69E749F258DE3CAFE6D25DA0136E /* HSDatePickerViewController.m */,
+				5AE9B16FF9302A25419BDECFA8103A3A /* Resources */,
+				8E797A102EDFA004BB1326E0A52DB92B /* Support Files */,
 			);
-			name = "Pods-Organization";
-			path = "Target Support Files/Pods-Organization";
+			name = HSDatePickerViewController;
+			path = HSDatePickerViewController;
 			sourceTree = "<group>";
 		};
-		3D280A11524E69ECFFEAF7C60B6F62C3 /* Products */ = {
+		4B3D1E018BECF7A566432283FF5C641D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				1AE25CD3127688A2F0E7FCFE252EA817 /* libHSDatePickerViewController.a */,
-				1F4AD156175A6AC689AFE0494486E02C /* libPods-Organization.a */,
+				7D243A608E80A699D081B37BAAB2B07A /* Alamofire.modulemap */,
+				77CA746846D6FFD5D202CBEC9C4BE395 /* Alamofire.xcconfig */,
+				DF12396DA4911DE36CC64A5F611FE278 /* Alamofire-dummy.m */,
+				4E26DF9238B19EBF4E40DC6A32A4CC54 /* Alamofire-prefix.pch */,
+				42737ED98CCAF87A68FAE6B02CD7DF34 /* Alamofire-umbrella.h */,
+				7755EFDCF85628937AB3FFC2258F417E /* Info.plist */,
 			);
-			name = Products;
+			name = "Support Files";
+			path = "../Target Support Files/Alamofire";
 			sourceTree = "<group>";
 		};
-		67FB103A1C34862AD86018237B7B9CB7 /* Pods */ = {
+		5AE9B16FF9302A25419BDECFA8103A3A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8D85BB67DBEA6E830C2AE7E2137BCF3B /* HSDatePickerViewController */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		6AD6D1B71042693FC8C5329DA9CADDAA /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				5D0DEBA501ED3EA0A4246776B9E0BE39 /* HSDatePickerViewController.xib */,
+				03AFC962850ECA07C505DEF12350E67D /* HSDatePickerViewController.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+		7D896EDEE4DE19C9F375DD92C5325146 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+				708754136B163FF20CBBAFD1E03B5FD8 /* Alamofire.framework */,
+				FA21113D55FBC5E5A1EB819A392B4FE4 /* HSDatePickerViewController.framework */,
+				4E66BE0B27759FCF8FE224BDC875109A /* Pods_Organization.framework */,
 			);
-			name = iOS;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -118,89 +182,178 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				67FB103A1C34862AD86018237B7B9CB7 /* Pods */,
-				3D280A11524E69ECFFEAF7C60B6F62C3 /* Products */,
-				B347C05D14C6C308C4EFBAD568989B07 /* Targets Support Files */,
+				B2B73DEECBF6EAA09A814C573EE8C975 /* Pods */,
+				7D896EDEE4DE19C9F375DD92C5325146 /* Products */,
+				A75BC85A5EC210C8F15F36106E2B33C7 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8D85BB67DBEA6E830C2AE7E2137BCF3B /* HSDatePickerViewController */ = {
+		862F425F11FDE7BEA917CA9E1E814246 /* Pods-Organization */ = {
 			isa = PBXGroup;
 			children = (
-				F20B34291DDC72D326A6DFA4865A81D0 /* HSDatePickerViewController.h */,
-				C3A8FF73DD817385EE9CA0E56DDBE853 /* HSDatePickerViewController.m */,
-				6AD6D1B71042693FC8C5329DA9CADDAA /* Resources */,
-				B98E884F646622C52DF125AB9E0BE757 /* Support Files */,
+				558F35740A23D3173019CB99B60AE6C5 /* Info.plist */,
+				7ADC3B6ADBE3BA585CB1B93432B41BF7 /* Pods-Organization.modulemap */,
+				3B6276D4294ED5556EE9CF8CA6F9395F /* Pods-Organization-acknowledgements.markdown */,
+				4A18BD3C232EACDB2D583C18C2F4A6A1 /* Pods-Organization-acknowledgements.plist */,
+				848B254A2085A89F38407D68B5447140 /* Pods-Organization-dummy.m */,
+				4589AE78B3D2B8149F1366ED9CEABD2C /* Pods-Organization-frameworks.sh */,
+				41DA5B046AE1709326A7325ADF1E8177 /* Pods-Organization-resources.sh */,
+				AA518B95455EBF9CC3940709CFA93000 /* Pods-Organization-umbrella.h */,
+				065DB5B619AE75CD7400D9C69978C870 /* Pods-Organization.debug.xcconfig */,
+				E714A59CC31FF793E5B6DD14E554718B /* Pods-Organization.release.xcconfig */,
 			);
-			name = HSDatePickerViewController;
-			path = HSDatePickerViewController;
+			name = "Pods-Organization";
+			path = "Target Support Files/Pods-Organization";
 			sourceTree = "<group>";
 		};
-		B347C05D14C6C308C4EFBAD568989B07 /* Targets Support Files */ = {
+		8E797A102EDFA004BB1326E0A52DB92B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				29517B88D5073B24C7470E83A07FE417 /* Pods-Organization */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		B98E884F646622C52DF125AB9E0BE757 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				44AC6650AAA33C22C6C22D7B2BB3328C /* HSDatePickerViewController.xcconfig */,
-				4043D21B09F46F45A6D297F2D385E939 /* HSDatePickerViewController-dummy.m */,
-				BC0193C06E52CC879798FF79F2595C08 /* HSDatePickerViewController-prefix.pch */,
+				770F2CE5C5032F32200FFF8977983273 /* HSDatePickerViewController.modulemap */,
+				FD629B3B44B3F4FABD276F9DDD61CE38 /* HSDatePickerViewController.xcconfig */,
+				9CBE8F7D2426D67446FF7FE141C08C16 /* HSDatePickerViewController-dummy.m */,
+				2BFBC0E67CD6FFE41BD3052789880445 /* HSDatePickerViewController-prefix.pch */,
+				EE713C8DA3F2150E86BBD2F4D7328C2F /* HSDatePickerViewController-umbrella.h */,
+				70555F93F82EAE05DE00AC11CB0CEBB3 /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/HSDatePickerViewController";
 			sourceTree = "<group>";
 		};
+		9EC128042C8643C68F0747465BB4A22D /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				907427FF596F0028CD71F0E5BA5187C5 /* AFError.swift */,
+				0E38BC18A013094CD48479B20656D0F1 /* Alamofire.swift */,
+				728FCF9438E2218F1C976B496C6BAA70 /* DispatchQueue+Alamofire.swift */,
+				E3636A630248F015A20662967D3B92CA /* MultipartFormData.swift */,
+				154E8533D6C490CD8359E204A0189451 /* NetworkReachabilityManager.swift */,
+				98D8F2A5553C2CFAEBD16752FD27379C /* Notifications.swift */,
+				5B14071495C5BD3820E86795C737036B /* ParameterEncoding.swift */,
+				59262C7B539D3915327B86D66788A40B /* Request.swift */,
+				187315EE3FE653351D226271582BF17D /* Response.swift */,
+				2E1CED201ECC65FD86617834FF6F37CC /* ResponseSerialization.swift */,
+				444F4575446CDCADE46A8CDA4B897960 /* Result.swift */,
+				8441C27985A808EB1ECCB481DB4F7E27 /* ServerTrustPolicy.swift */,
+				48C770ECA6B7AD84A1EA372D485500D0 /* SessionDelegate.swift */,
+				62C13D1E04630DC80A1133AF39F2CEE7 /* SessionManager.swift */,
+				17737BCC0FC11AD8A7407FC5D382EFD3 /* TaskDelegate.swift */,
+				F3B230F03249B517417C4DD2467B134C /* Timeline.swift */,
+				C30D57E13893E9F242BEE270D4FE8BA9 /* Validation.swift */,
+				4B3D1E018BECF7A566432283FF5C641D /* Support Files */,
+			);
+			name = Alamofire;
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		A75BC85A5EC210C8F15F36106E2B33C7 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				862F425F11FDE7BEA917CA9E1E814246 /* Pods-Organization */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B2B73DEECBF6EAA09A814C573EE8C975 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9EC128042C8643C68F0747465BB4A22D /* Alamofire */,
+				10FD835BF978B3C643173A4D20D743B9 /* HSDatePickerViewController */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		AE800B3C036E9482C587C7A58786D5F2 /* Headers */ = {
+		381F75C3C4CCA131C1EC5F728003E0D2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C95F7F7F3FB1038C7A48BBAA1755CD34 /* HSDatePickerViewController.h in Headers */,
+				DD6BC68FAB02339AA7F69E0342E085E9 /* HSDatePickerViewController-umbrella.h in Headers */,
+				EC0AAE4D83756EFE701B6E3360439B04 /* HSDatePickerViewController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4002B6E97835FDCCAA5963EFE09A3E0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E990CC936D0541CBD38DCC38C162E8C3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C418FB1D71A76CB7A3DDF53607C3FACC /* Pods-Organization-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		63F6603157EACC85F3DD5D3BC2901077 /* Pods-Organization */ = {
+		111B66715A02D0F11C56B42ED5060BA4 /* Pods-Organization */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9CFFB944FD52973906697163BE4913A6 /* Build configuration list for PBXNativeTarget "Pods-Organization" */;
+			buildConfigurationList = E3242AE01D71C747797150037734CD90 /* Build configuration list for PBXNativeTarget "Pods-Organization" */;
 			buildPhases = (
-				77BD67EDABAAE6217190ACDA7AE7FBCA /* Sources */,
-				DEA83AACFB5AABA9D30ED235D8E0AF86 /* Frameworks */,
+				F7E2A0B5C86F2FFBE3A92AA215714954 /* Sources */,
+				975F33472556C24B0902E16AF03BE2D7 /* Frameworks */,
+				E990CC936D0541CBD38DCC38C162E8C3 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				73B98FE8B77DF36ADD10F237344A369A /* PBXTargetDependency */,
+				61CA537437D62F8E1AA745BB083783D1 /* PBXTargetDependency */,
+				EA2E19F5C7FE4D23ADD629DF7B362FD9 /* PBXTargetDependency */,
 			);
 			name = "Pods-Organization";
 			productName = "Pods-Organization";
-			productReference = 1F4AD156175A6AC689AFE0494486E02C /* libPods-Organization.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = 4E66BE0B27759FCF8FE224BDC875109A /* Pods_Organization.framework */;
+			productType = "com.apple.product-type.framework";
 		};
-		C42630B2C5CE9EBC52F895E367A87286 /* HSDatePickerViewController */ = {
+		88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1079D45979674CE59A5C1E56CB0CC45C /* Build configuration list for PBXNativeTarget "HSDatePickerViewController" */;
+			buildConfigurationList = 419E5D95491847CD79841B971A8A3277 /* Build configuration list for PBXNativeTarget "Alamofire" */;
 			buildPhases = (
-				A334B40301DA95EDCB52F07879E74769 /* Sources */,
-				AF4315DA645BB7607BF6B0B1BF3C2908 /* Frameworks */,
-				AE800B3C036E9482C587C7A58786D5F2 /* Headers */,
+				32B9974868188C4803318E36329C87FE /* Sources */,
+				99195E4207764744AEC07ECCBCD550EB /* Frameworks */,
+				B4002B6E97835FDCCAA5963EFE09A3E0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Alamofire;
+			productName = Alamofire;
+			productReference = 708754136B163FF20CBBAFD1E03B5FD8 /* Alamofire.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CB37792879AFEB40A9BB515BF6949CD5 /* HSDatePickerViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63920FA062100A275BE604B0C7025A2D /* Build configuration list for PBXNativeTarget "HSDatePickerViewController" */;
+			buildPhases = (
+				A675BB88F988EE74DEB43EDCEF265D27 /* Sources */,
+				55090CA199BBEDB08BBD8658F171ED36 /* Frameworks */,
+				381F75C3C4CCA131C1EC5F728003E0D2 /* Headers */,
+				50B61F1CC68DED255EC54E63C11F16B1 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -208,8 +361,8 @@
 			);
 			name = HSDatePickerViewController;
 			productName = HSDatePickerViewController;
-			productReference = 1AE25CD3127688A2F0E7FCFE252EA817 /* libHSDatePickerViewController.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = FA21113D55FBC5E5A1EB819A392B4FE4 /* HSDatePickerViewController.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -217,7 +370,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -228,162 +381,275 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 3D280A11524E69ECFFEAF7C60B6F62C3 /* Products */;
+			productRefGroup = 7D896EDEE4DE19C9F375DD92C5325146 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C42630B2C5CE9EBC52F895E367A87286 /* HSDatePickerViewController */,
-				63F6603157EACC85F3DD5D3BC2901077 /* Pods-Organization */,
+				88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */,
+				CB37792879AFEB40A9BB515BF6949CD5 /* HSDatePickerViewController */,
+				111B66715A02D0F11C56B42ED5060BA4 /* Pods-Organization */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXSourcesBuildPhase section */
-		77BD67EDABAAE6217190ACDA7AE7FBCA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+/* Begin PBXResourcesBuildPhase section */
+		50B61F1CC68DED255EC54E63C11F16B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98219895BFE9DADF8B3AA2599D6F8AF6 /* Pods-Organization-dummy.m in Sources */,
+				D041E67B1EE271E3336B7707DDC4DB57 /* HSDatePickerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A334B40301DA95EDCB52F07879E74769 /* Sources */ = {
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		32B9974868188C4803318E36329C87FE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28E7483A4CF338C56C51C7F9A66CCB46 /* HSDatePickerViewController-dummy.m in Sources */,
-				5F0BF57D672C0DAF0C92E983F83DBF39 /* HSDatePickerViewController.m in Sources */,
+				9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */,
+				A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */,
+				F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */,
+				61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */,
+				B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */,
+				A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */,
+				EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */,
+				BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */,
+				5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */,
+				CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */,
+				F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */,
+				7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */,
+				62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */,
+				7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */,
+				AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */,
+				3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */,
+				10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */,
+				BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A675BB88F988EE74DEB43EDCEF265D27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D1F02C88E49763933FE2C80C40B373F /* HSDatePickerViewController-dummy.m in Sources */,
+				FC9EF7011275F6098A5CD5A3B1A0E6C3 /* HSDatePickerViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7E2A0B5C86F2FFBE3A92AA215714954 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74E45C8ABFCBFC6A1990B73BC52DFB40 /* Pods-Organization-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		73B98FE8B77DF36ADD10F237344A369A /* PBXTargetDependency */ = {
+		61CA537437D62F8E1AA745BB083783D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = 88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */;
+			targetProxy = 2DFFE362E015AAD16777BCB5D0E7C0B4 /* PBXContainerItemProxy */;
+		};
+		EA2E19F5C7FE4D23ADD629DF7B362FD9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = HSDatePickerViewController;
-			target = C42630B2C5CE9EBC52F895E367A87286 /* HSDatePickerViewController */;
-			targetProxy = 5AE4065FAB5702DB06E9CA570CC2AA0A /* PBXContainerItemProxy */;
+			target = CB37792879AFEB40A9BB515BF6949CD5 /* HSDatePickerViewController */;
+			targetProxy = 1E2D2FEC65D499304A7A9C9C08708A68 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		156284431C64CB05C59BDA0595A1E95A /* Release */ = {
+		077C4BB7DBEAA715DED46C057DC8051C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77CA746846D6FFD5D202CBEC9C4BE395 /* Alamofire.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		22E5D0596EB040B8B5004338B5877947 /* Debug */ = {
+		099F1BEBE2F4795DB5E6A0A68EE58A95 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 44AC6650AAA33C22C6C22D7B2BB3328C /* HSDatePickerViewController.xcconfig */;
+			baseConfigurationReference = FD629B3B44B3F4FABD276F9DDD61CE38 /* HSDatePickerViewController.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/HSDatePickerViewController/HSDatePickerViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HSDatePickerViewController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HSDatePickerViewController/HSDatePickerViewController.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = HSDatePickerViewController;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		75CFB180BDB4392B5C1D316BFEACF20B /* Debug */ = {
+		31F988AF05F1325E5CD25CDE2019ED9C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 904531BD73617ADA474E07A9DBC8C3BE /* Pods-Organization.debug.xcconfig */;
+			baseConfigurationReference = 065DB5B619AE75CD7400D9C69978C870 /* Pods-Organization.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				INFOPLIST_FILE = "Target Support Files/Pods-Organization/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Organization/Pods-Organization.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Pods_Organization;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		B6DF982852418E9923E26697C7F6304A /* Release */ = {
+		4BC9596C9BE207394B2A2FB73E4B9221 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 44AC6650AAA33C22C6C22D7B2BB3328C /* HSDatePickerViewController.xcconfig */;
+			baseConfigurationReference = FD629B3B44B3F4FABD276F9DDD61CE38 /* HSDatePickerViewController.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/HSDatePickerViewController/HSDatePickerViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HSDatePickerViewController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HSDatePickerViewController/HSDatePickerViewController.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = HSDatePickerViewController;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		C382132BB6BF8CA1A911872A2062FD0D /* Debug */ = {
+		947EB6B2360095C5F61835CCF8E727B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E714A59CC31FF793E5B6DD14E554718B /* Pods-Organization.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Organization/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Organization/Pods-Organization.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Organization;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9BFC9E4A7AAD7A607ACE06D95A401A5A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -391,10 +657,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
@@ -415,63 +684,129 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		EB128EEADB1CE09A5CE5439C7733A7D7 /* Release */ = {
+		C03B8870130C98D1B02B59D003687524 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EBDE64C1078DFEA502909A612B64053E /* Pods-Organization.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D60F8C4DE6B0D221A33959774DA3DAFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77CA746846D6FFD5D202CBEC9C4BE395 /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Alamofire;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1079D45979674CE59A5C1E56CB0CC45C /* Build configuration list for PBXNativeTarget "HSDatePickerViewController" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				22E5D0596EB040B8B5004338B5877947 /* Debug */,
-				B6DF982852418E9923E26697C7F6304A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C382132BB6BF8CA1A911872A2062FD0D /* Debug */,
-				156284431C64CB05C59BDA0595A1E95A /* Release */,
+				9BFC9E4A7AAD7A607ACE06D95A401A5A /* Debug */,
+				C03B8870130C98D1B02B59D003687524 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9CFFB944FD52973906697163BE4913A6 /* Build configuration list for PBXNativeTarget "Pods-Organization" */ = {
+		419E5D95491847CD79841B971A8A3277 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				75CFB180BDB4392B5C1D316BFEACF20B /* Debug */,
-				EB128EEADB1CE09A5CE5439C7733A7D7 /* Release */,
+				D60F8C4DE6B0D221A33959774DA3DAFF /* Debug */,
+				077C4BB7DBEAA715DED46C057DC8051C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63920FA062100A275BE604B0C7025A2D /* Build configuration list for PBXNativeTarget "HSDatePickerViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				099F1BEBE2F4795DB5E6A0A68EE58A95 /* Debug */,
+				4BC9596C9BE207394B2A2FB73E4B9221 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3242AE01D71C747797150037734CD90 /* Build configuration list for PBXNativeTarget "Pods-Organization" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31F988AF05F1325E5CD25CDE2019ED9C /* Debug */,
+				947EB6B2360095C5F61835CCF8E727B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

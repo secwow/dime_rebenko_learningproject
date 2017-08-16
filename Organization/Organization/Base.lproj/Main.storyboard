@@ -260,6 +260,14 @@
                                     <action selector="randomizeOrder:" destination="arh-B2-jZZ" eventType="touchDown" id="J8O-jx-9PF"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHY-SZ-5Vb">
+                                <rect key="frame" x="88" y="191" width="144" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Fetch organizations"/>
+                                <connections>
+                                    <action selector="fetchOrganization:" destination="arh-B2-jZZ" eventType="touchDown" id="dRj-bj-abr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
